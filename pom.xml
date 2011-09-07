@@ -3,8 +3,8 @@
   <parent>
     <groupId>com.phloc</groupId>
     <artifactId>parent-pom</artifactId>
-    <version>14.3</version>
-    <relativePath>../../base/pom.xml</relativePath>
+    <version>15</version>
+    <relativePath>../phloc-parent-pom/pom.xml</relativePath>
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <artifactId>phloc-holiday</artifactId>
@@ -23,7 +23,9 @@
   </licenses>
   
   <scm>
-    <developerConnection>scm:svn:http://213.47.80.128/svn/main/phloc-dev/active/phloc-holiday/trunk</developerConnection>
+    <url>http://code.google.com/p/phloc-holiday/source/browse/</url>
+    <connection>scm:svn:http://phloc-holiday.googlecode.com/svn/trunk</connection>
+    <developerConnection>scm:svn:https://phloc-holiday.googlecode.com/svn/trunk</developerConnection>
   </scm>
 
   <distributionManagement>
@@ -75,13 +77,6 @@
               com.phloc.holiday.*
             </Export-Package>
           </instructions>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-release-plugin</artifactId>
-        <configuration>
-          <tagBase>http://213.47.80.128/svn/main/phloc-dev-tags/active/${project.name}</tagBase>
         </configuration>
       </plugin>
       <plugin>
