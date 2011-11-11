@@ -30,7 +30,7 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.concurrent.Immutable;
 
-import com.phloc.commons.compare.CompareUtils;
+import com.phloc.commons.compare.EqualsUtils;
 import com.phloc.commons.hash.HashCodeGenerator;
 import com.phloc.commons.lang.ClassHelper;
 import com.phloc.commons.string.ToStringGenerator;
@@ -40,7 +40,7 @@ import com.phloc.commons.text.resource.Utf8ResourceBundle;
 /**
  * Represents the holiday and contains the actual date and an localized
  * description.
- *
+ * 
  * @author Sven Diedrichsen
  * @author philip
  */
@@ -109,7 +109,7 @@ public final class ResourceBundleHoliday implements ISingleHoliday
     if (!(o instanceof ResourceBundleHoliday))
       return false;
     final ResourceBundleHoliday rhs = (ResourceBundleHoliday) o;
-    return m_bIsOfficial == rhs.m_bIsOfficial && CompareUtils.nullSafeEquals (m_aRBKey, rhs.m_aRBKey);
+    return m_bIsOfficial == rhs.m_bIsOfficial && EqualsUtils.nullSafeEquals (m_aRBKey, rhs.m_aRBKey);
   }
 
   @Override
