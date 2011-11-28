@@ -22,11 +22,15 @@
  */
 package com.phloc.holiday.mgr;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
+
 import java.util.Calendar;
 import java.util.HashSet;
 import java.util.Set;
-
-import junit.framework.TestCase;
 
 import org.joda.time.DateTimeConstants;
 import org.joda.time.LocalDate;
@@ -44,7 +48,7 @@ import com.phloc.holiday.IHolidayManager;
 /**
  * @author svdi1de
  */
-public class HolidayTest extends TestCase
+public class HolidayTest
 {
   private static final Logger s_aLogger = LoggerFactory.getLogger (HolidayTest.class);
 
@@ -81,7 +85,7 @@ public class HolidayTest extends TestCase
     test_days_l11.add (PDTFactory.createLocalDate (2010, DateTimeConstants.DECEMBER, 17));
   }
 
-  @Test (expected = IllegalArgumentException.class)
+  @Test
   public void testMissingCountry () throws Exception
   {
     try
