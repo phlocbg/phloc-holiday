@@ -22,15 +22,17 @@
  */
 package com.phloc.holiday.mgr;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
-import junit.framework.TestCase;
-
 import org.joda.time.LocalDate;
-import org.junit.Assert;
 
 import com.phloc.commons.collections.ArrayHelper;
 import com.phloc.holiday.HolidayManagerFactory;
@@ -41,7 +43,7 @@ import com.phloc.holiday.ISingleHoliday;
 /**
  * @author svdi1de
  */
-public abstract class AbstractCountryTestBase extends TestCase
+public abstract class AbstractCountryTestBase
 {
   /**
    * Compares two hierarchy structure by traversing down.
@@ -53,12 +55,12 @@ public abstract class AbstractCountryTestBase extends TestCase
    */
   protected void compareHierarchies (final CalendarHierarchy expected, final CalendarHierarchy found)
   {
-    Assert.assertNotNull ("Null description", found.getDescription (Locale.getDefault ()));
-    Assert.assertEquals ("Wrong hierarchy id.", expected.getID (), found.getID ());
-    Assert.assertEquals ("Number of children wrong.", expected.getChildren ().size (), found.getChildren ().size ());
+    assertNotNull ("Null description", found.getDescription (Locale.getDefault ()));
+    assertEquals ("Wrong hierarchy id.", expected.getID (), found.getID ());
+    assertEquals ("Number of children wrong.", expected.getChildren ().size (), found.getChildren ().size ());
     for (final String id : expected.getChildren ().keySet ())
     {
-      Assert.assertTrue ("Missing " + id + " within " + found.getID (), found.getChildren ().containsKey (id));
+      assertTrue ("Missing " + id + " within " + found.getID (), found.getChildren ().containsKey (id));
       compareHierarchies (expected.getChildren ().get (id), found.getChildren ().get (id));
     }
   }
@@ -80,7 +82,7 @@ public abstract class AbstractCountryTestBase extends TestCase
     final HolidayMap aFoundHolidays = aFound.getHolidays (nYear, ArrayHelper.newArray (args, String.class));
     for (final Map.Entry <LocalDate, ISingleHoliday> aEntry : aExpectedHolidays.getMap ().entrySet ())
     {
-      Assert.assertNotNull ("Description is null.", aEntry.getValue ().getHolidayName (Locale.getDefault ()));
+      assertNotNull ("Description is null.", aEntry.getValue ().getHolidayName (Locale.getDefault ()));
       if (!aFoundHolidays.containsHolidayForDate (aEntry.getKey ()))
       {
         fail ("Could not find " +
