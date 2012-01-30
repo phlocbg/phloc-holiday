@@ -22,6 +22,7 @@
  */
 package com.phloc.holiday.parser;
 
+import javax.annotation.Nonnull;
 import javax.annotation.concurrent.Immutable;
 
 import org.joda.time.LocalDate;
@@ -69,7 +70,7 @@ public abstract class AbstractHolidayParser implements IHolidayParser
    *        the year to check against
    * @return is valid
    */
-  private static boolean _isValidForCycle (final Holiday aHoliday, final int nYear)
+  private static boolean _isValidForCycle (@Nonnull final Holiday aHoliday, final int nYear)
   {
     final String sEvery = aHoliday.getEvery ();
     if (sEvery != null && !"EVERY_YEAR".equals (sEvery))
@@ -81,25 +82,25 @@ public abstract class AbstractHolidayParser implements IHolidayParser
 
       if (aHoliday.getValidFrom () != null)
       {
-        int cycleYears = 0;
+        int nCycleYears = 0;
         if ("2_YEARS".equalsIgnoreCase (sEvery))
-          cycleYears = 2;
+          nCycleYears = 2;
         else
           if ("3_YEARS".equalsIgnoreCase (sEvery))
-            cycleYears = 3;
+            nCycleYears = 3;
           else
             if ("4_YEARS".equalsIgnoreCase (sEvery))
-              cycleYears = 4;
+              nCycleYears = 4;
             else
               if ("5_YEARS".equalsIgnoreCase (sEvery))
-                cycleYears = 5;
+                nCycleYears = 5;
               else
                 if ("6_YEARS".equalsIgnoreCase (sEvery))
-                  cycleYears = 6;
+                  nCycleYears = 6;
                 else
                   throw new IllegalArgumentException ("Cannot handle unknown cycle type '" + sEvery + "'.");
 
-        return (nYear - aHoliday.getValidFrom ().intValue ()) % cycleYears == 0;
+        return (nYear - aHoliday.getValidFrom ().intValue ()) % nCycleYears == 0;
       }
     }
     return true;
@@ -112,7 +113,7 @@ public abstract class AbstractHolidayParser implements IHolidayParser
    * @param nYear
    * @return is valid.
    */
-  private static boolean _isValidInYear (final Holiday aHoliday, final int nYear)
+  private static boolean _isValidInYear (@Nonnull final Holiday aHoliday, final int nYear)
   {
     return (aHoliday.getValidFrom () == null || aHoliday.getValidFrom ().intValue () <= nYear) &&
            (aHoliday.getValidTo () == null || aHoliday.getValidTo ().intValue () >= nYear);
