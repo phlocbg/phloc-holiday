@@ -69,10 +69,10 @@ public abstract class AbstractCountryTestBase
   {
     final CalendarHierarchy expectedHierarchy = expected.getHierarchy ();
     final ArrayList <String> args = new ArrayList <String> ();
-    compareDates (expected, found, expectedHierarchy, args, year);
+    _compareDates (expected, found, expectedHierarchy, args, year);
   }
 
-  private void compareDates (final IHolidayManager aExpected,
+  private void _compareDates (final IHolidayManager aExpected,
                              final IHolidayManager aFound,
                              final CalendarHierarchy aHierarchy,
                              final List <String> args,
@@ -99,7 +99,7 @@ public abstract class AbstractCountryTestBase
     {
       final ArrayList <String> newArgs = new ArrayList <String> (args);
       newArgs.add (id);
-      compareDates (aExpected, aFound, aHierarchy.getChildren ().get (id), newArgs, nYear);
+      _compareDates (aExpected, aFound, aHierarchy.getChildren ().get (id), newArgs, nYear);
     }
   }
 
