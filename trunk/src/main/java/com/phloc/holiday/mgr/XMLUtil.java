@@ -123,7 +123,7 @@ public final class XMLUtil
    * @return the type of holiday
    */
   @Nonnull
-  public static IHolidayType getType (final HolidayType aType)
+  public static IHolidayType getType (@Nonnull final HolidayType aType)
   {
     switch (aType)
     {

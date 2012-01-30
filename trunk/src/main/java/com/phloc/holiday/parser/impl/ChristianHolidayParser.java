@@ -22,22 +22,17 @@
  */
 package com.phloc.holiday.parser.impl;
 
-import org.joda.time.DateTimeConstants;
-import org.joda.time.LocalDate;
-import org.joda.time.chrono.GregorianChronology;
-import org.joda.time.chrono.JulianChronology;
+import javax.annotation.Nonnull;
 
-import com.phloc.datetime.CPDT;
-import com.phloc.datetime.config.PDTConfig;
+import org.joda.time.LocalDate;
+
 import com.phloc.holiday.CalendarUtil;
 import com.phloc.holiday.HolidayMap;
 import com.phloc.holiday.IHolidayType;
-import com.phloc.holiday.ResourceBundleHoliday;
 import com.phloc.holiday.config.ChristianHoliday;
 import com.phloc.holiday.config.ChronologyType;
 import com.phloc.holiday.config.Holidays;
 import com.phloc.holiday.mgr.XMLUtil;
-import com.phloc.holiday.parser.AbstractHolidayParser;
 
 /**
  * This parser creates christian holidays for the given year relative to easter
@@ -46,21 +41,23 @@ import com.phloc.holiday.parser.AbstractHolidayParser;
  * @author Sven Diedrichsen
  * @author philip
  */
-public class ChristianHolidayParser extends AbstractHolidayParser
+public class ChristianHolidayParser extends RelativeToEasterSundayParser
 {
   private static final ChristianHolidayParser s_aInstance = new ChristianHolidayParser ();
 
   private ChristianHolidayParser ()
   {}
 
+  @Nonnull
   public static ChristianHolidayParser getInstance ()
   {
     return s_aInstance;
   }
 
   /**
-   * Parses all christian holidays relative to eastern.
+   * {@inheritDoc} Parses all christian holidays relative to eastern.
    */
+  @Override
   public void parse (final int nYear, final HolidayMap aHolidayMap, final Holidays aConfig)
   {
     for (final ChristianHoliday aChristianHoliday : aConfig.getChristianHoliday ())
@@ -114,6 +111,7 @@ public class ChristianHolidayParser extends AbstractHolidayParser
           aEasterSunday = aEasterSunday.plusDays (39);
           break;
         case PENTECOST:
+        case WHIT_SUNDAY:
           aEasterSunday = aEasterSunday.plusDays (49);
           break;
         case WHIT_MONDAY:
@@ -132,73 +130,7 @@ public class ChristianHolidayParser extends AbstractHolidayParser
       final LocalDate aConvertedDate = CalendarUtil.convertToGregorianDate (aEasterSunday);
       final IHolidayType aType = XMLUtil.getType (aChristianHoliday.getLocalizedType ());
       final String sPropertiesKey = "christian." + aChristianHoliday.getType ().name ();
-      aHolidayMap.add (aConvertedDate, new ResourceBundleHoliday (aType, sPropertiesKey));
+      addChrstianHoliday (aConvertedDate, sPropertiesKey, aType, aHolidayMap);
     }
-  }
-
-  /**
-   * Returns the easter Sunday for a given year.
-   * 
-   * @param nYear
-   * @return Easter Sunday.
-   */
-  public static LocalDate getEasterSunday (final int nYear)
-  {
-    return nYear <= CPDT.LAST_JULIAN_YEAR ? getJulianEasterSunday (nYear) : getGregorianEasterSunday (nYear);
-  }
-
-  /**
-   * Returns the easter Sunday within the julian chronology.
-   * 
-   * @param nYear
-   * @return julian easter Sunday
-   */
-  public static LocalDate getJulianEasterSunday (final int nYear)
-  {
-    int a, b, c, d, e;
-    int x, nMonth, nDay;
-    a = nYear % 4;
-    b = nYear % 7;
-    c = nYear % 19;
-    d = (19 * c + 15) % 30;
-    e = (2 * a + 4 * b - d + 34) % 7;
-    x = d + e + 114;
-    nMonth = x / 31;
-    nDay = (x % 31) + 1;
-    return new LocalDate (nYear,
-                          (nMonth == 3 ? DateTimeConstants.MARCH : DateTimeConstants.APRIL),
-                          nDay,
-                          JulianChronology.getInstance ());
-  }
-
-  /**
-   * Returns the easter Sunday within the gregorian chronology.
-   * 
-   * @param nYear
-   * @return gregorian easter Sunday.
-   */
-  public static LocalDate getGregorianEasterSunday (final int nYear)
-  {
-    int a, b, c, d, e, f, g, h, i, j, k, l;
-    int x, nMonth, nDay;
-    a = nYear % 19;
-    b = nYear / 100;
-    c = nYear % 100;
-    d = b / 4;
-    e = b % 4;
-    f = (b + 8) / 25;
-    g = (b - f + 1) / 3;
-    h = (19 * a + b - d - g + 15) % 30;
-    i = c / 4;
-    j = c % 4;
-    k = (32 + 2 * e + 2 * i - h - j) % 7;
-    l = (a + 11 * h + 22 * k) / 451;
-    x = h + k - 7 * l + 114;
-    nMonth = x / 31;
-    nDay = (x % 31) + 1;
-    return new LocalDate (nYear,
-                          (nMonth == 3 ? DateTimeConstants.MARCH : DateTimeConstants.APRIL),
-                          nDay,
-                          GregorianChronology.getInstance (PDTConfig.getDefaultDateTimeZone ()));
   }
 }

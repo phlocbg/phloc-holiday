@@ -41,7 +41,7 @@ import com.phloc.commons.string.ToStringGenerator;
 
 /**
  * Contains a map of holidays, were the key is the date.
- *
+ * 
  * @author philip
  */
 public final class HolidayMap
@@ -109,6 +109,11 @@ public final class HolidayMap
   public int size ()
   {
     return m_aMap.size ();
+  }
+
+  public boolean isEmpty ()
+  {
+    return m_aMap.isEmpty ();
   }
 
   @Override
