@@ -73,6 +73,8 @@ public class FixedWeekdayRelativeToFixedParser extends AbstractHolidayParser
       int nDays = 0;
       switch (aFixedWeekdayRelativeToFixed.getWhich ())
       {
+        case FIRST:
+          break;
         case SECOND:
           nDays = 7;
           break;
@@ -81,6 +83,9 @@ public class FixedWeekdayRelativeToFixedParser extends AbstractHolidayParser
           break;
         case FOURTH:
           nDays = 21;
+          break;
+        case LAST:
+          // seems to be unsupported
           break;
       }
       // move day further if it is second, third or fourth weekday

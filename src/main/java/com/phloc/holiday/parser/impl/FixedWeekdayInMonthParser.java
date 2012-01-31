@@ -79,6 +79,8 @@ public class FixedWeekdayInMonthParser extends AbstractHolidayParser
     }
     switch (aFixedWeekdayInMonth.getWhich ())
     {
+      case FIRST:
+        break;
       case SECOND:
         aDate = aDate.plusDays (7);
         break;
@@ -87,6 +89,9 @@ public class FixedWeekdayInMonthParser extends AbstractHolidayParser
         break;
       case FOURTH:
         aDate = aDate.plusDays (21);
+        break;
+      case LAST:
+        break;
     }
     return aDate;
   }
