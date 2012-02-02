@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <parent>
+    <groupId>com.phloc</groupId>
+    <artifactId>parent-pom</artifactId>
+    <version>17.2</version>
+    <relativePath>../phloc-parent-pom/pom.xml</relativePath>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>phloc-holiday</artifactId>
+  <version>2.6.0</version>
+  <packaging>bundle</packaging>
+  <name>phloc-holiday</name>
+  <description>phloc holiday calculator and manage</description>
+  <url>http://repo.phloc.com/apidocs/phloc-holiday/${project.version}</url>
+  
+  <licenses>
+    <license>
+      <name>Apache 2</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  
+  <scm>
+    <url>http://code.google.com/p/phloc-holiday/source/browse/tags/phloc-holiday-2.6.0</url>
+    <connection>scm:svn:http://phloc-holiday.googlecode.com/svn/tags/phloc-holiday-2.6.0</connection>
+    <developerConnection>scm:svn:https://phloc-holiday.googlecode.com/svn/tags/phloc-holiday-2.6.0</developerConnection>
+  </scm>
+
+  <distributionManagement>
+    <repository>
+      <id>repo.phloc.public</id>
+      <url>sftp://www.phloc.com/var/www/html-repo/maven2</url>
+    </repository>
+  </distributionManagement>
+  
+  <properties>
+    <jaxb.version>2.2.4-1</jaxb.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.phloc</groupId>
+      <artifactId>phloc-commons</artifactId>
+      <version>3.4.2</version>
+    </dependency>
+    <dependency>
+      <groupId>com.phloc</groupId>
+      <artifactId>phloc-datetime</artifactId>
+      <version>2.9.0</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>com.sun.xml.bind</groupId>
+      <artifactId>jaxb-impl</artifactId>
+      <version>${jaxb.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-simple</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <extensions>true</extensions>
+        <configuration>
+          <instructions>
+            <Export-Package>
+              com.phloc.holiday.*
+            </Export-Package>
+          </instructions>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.jvnet.jaxb2.maven2</groupId>
+        <artifactId>maven-jaxb22-plugin</artifactId>
+        <version>0.8.0</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>generate</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <schemaDirectory>${basedir}/src/main/resources/schemas</schemaDirectory>
+          <generatePackage>com.phloc.holiday.config</generatePackage>
+        </configuration>
+        <dependencies>
+          <dependency>
+            <groupId>com.sun.xml.bind</groupId>
+            <artifactId>jaxb-xjc</artifactId>
+            <version>${jaxb.version}</version>
+          </dependency>
+        </dependencies>
+      </plugin>
+    </plugins>
+  </build>
+</project>

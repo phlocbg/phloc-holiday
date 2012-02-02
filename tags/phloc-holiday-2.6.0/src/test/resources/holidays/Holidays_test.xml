@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Original Copyright 2010 Sven Diedrichsen
+    This work is based on jollyday library trunk 2010/10/20
+    http://jollyday.sourceforge.net/
+    Originally licensed under the Apache License, Version 2.0
+
+    =========
+
+    Copyright 2010-2012 phloc systems
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+    express or implied. See the License for the specific language
+    governing permissions and limitations under the License.
+
+-->
+<tns:Configuration hierarchy="test" description="Test holidays" 
+	xmlns:tns="http://www.example.org/Holiday" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.example.org/Holiday ../../../main/resources/Holiday.xsd">
+	<tns:Holidays>
+		<tns:Fixed month="JANUARY" day="1"/>
+		<tns:Fixed month="JANUARY" day="16">
+			<tns:MovingCondition substitute="SATURDAY" with="NEXT" weekday="MONDAY" />
+			<tns:MovingCondition substitute="SUNDAY" with="NEXT" weekday="MONDAY" />
+		</tns:Fixed>
+		<tns:RelativeToFixed>
+			<tns:Weekday>WEDNESDAY</tns:Weekday>
+			<tns:When>BEFORE</tns:When>
+			<tns:Date month="NOVEMBER" day="23"/>
+		</tns:RelativeToFixed>
+		<tns:RelativeToFixed >
+			<tns:Days>5</tns:Days>
+  			<tns:When>AFTER</tns:When>
+  			<tns:Date month="NOVEMBER" day="23"/>
+  		</tns:RelativeToFixed>
+		<tns:RelativeToWeekdayInMonth weekday="FRIDAY" when="AFTER">
+			<tns:FixedWeekday which="FOURTH" weekday="MONDAY" month="NOVEMBER"/>
+		</tns:RelativeToWeekdayInMonth>
+  		<tns:FixedWeekday which="LAST" weekday="MONDAY" month="AUGUST"/>
+		<tns:ChristianHoliday type="GOOD_FRIDAY"/>
+		<tns:ChristianHoliday type="EASTER_MONDAY" chronology="GREGORIAN"/>
+		<tns:ChristianHoliday type="ASH_WEDNESDAY" />
+	</tns:Holidays>
+	<tns:SubConfigurations hierarchy="level1">
+		<tns:Holidays>
+			<tns:Fixed month="JANUARY" day="2"/>
+		</tns:Holidays>
+		<tns:SubConfigurations hierarchy="level2">
+			<tns:Holidays>
+				<tns:Fixed month="JANUARY" day="3"/>
+			</tns:Holidays>
+		</tns:SubConfigurations>
+	</tns:SubConfigurations>
+	<tns:SubConfigurations hierarchy="level11">
+		<tns:Holidays>
+			<tns:IslamicHoliday type="ID_AL_FITR"/>
+			<tns:IslamicHoliday type="NEWYEAR" />
+			<tns:IslamicHoliday type="ASCHURA" />
+			<tns:IslamicHoliday type="LAILAT_AL_BARAT" />
+			<tns:IslamicHoliday type="LAILAT_AL_MIRAJ" />
+			<tns:IslamicHoliday type="LAILAT_AL_QADR" />
+			<tns:IslamicHoliday type="MAWLID_AN_NABI" />
+			<tns:IslamicHoliday type="RAMADAN" />
+		</tns:Holidays>
+	</tns:SubConfigurations>
+</tns:Configuration>
