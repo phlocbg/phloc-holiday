@@ -44,7 +44,7 @@ import com.phloc.holiday.mgr.XMLHolidayManagerJapan;
 
 /**
  * The main class for creating holiday managers.
- *
+ * 
  * @author philip
  */
 public final class HolidayManagerFactory
@@ -118,16 +118,20 @@ public final class HolidayManagerFactory
 
     if (aMgr == null)
     {
-      // Holiday manager needs to be instantiated!
       s_aRWLock.writeLock ().lock ();
       try
       {
-        // Is a special holiday manager registered?
-        final Class <? extends IHolidayManager> aClass = s_aClassMap.get (sCountryID);
-        aMgr = aClass != null ? GenericReflection.newInstance (aClass) : new XMLHolidayManager (sCountryID);
+        // Check in writeLock again to be 100% sure
+        aMgr = s_aInstMap.get (sCountryID);
         if (aMgr == null)
-          throw new IllegalArgumentException ("Failed to create holiday manager for country '" + sCountryID + "'");
-        s_aInstMap.put (sCountryID, aMgr);
+        {
+          // Is a special holiday manager registered?
+          final Class <? extends IHolidayManager> aClass = s_aClassMap.get (sCountryID);
+          aMgr = aClass != null ? GenericReflection.newInstance (aClass) : new XMLHolidayManager (sCountryID);
+          if (aMgr == null)
+            throw new IllegalArgumentException ("Failed to create holiday manager for country '" + sCountryID + "'");
+          s_aInstMap.put (sCountryID, aMgr);
+        }
       }
       finally
       {
@@ -139,7 +143,7 @@ public final class HolidayManagerFactory
 
   /**
    * Returns a set of all currently supported country codes.
-   *
+   * 
    * @return Set of supported country codes.
    */
   @Nonnull
