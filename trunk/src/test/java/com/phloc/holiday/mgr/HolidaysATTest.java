@@ -35,7 +35,7 @@ import com.phloc.datetime.PDTFactory;
 import com.phloc.holiday.HolidayManagerFactory;
 import com.phloc.holiday.IHolidayManager;
 
-public final class TestHolidaysAT
+public final class HolidaysATTest
 {
   @Test
   public void testAT ()
