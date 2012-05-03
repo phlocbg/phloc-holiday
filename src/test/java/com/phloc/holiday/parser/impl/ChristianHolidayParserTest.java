@@ -60,7 +60,7 @@ public final class ChristianHolidayParserTest
   public void testEaster ()
   {
     final HolidayMap aHolidays = new HolidayMap ();
-    final Holidays aConfig = createConfig (ChristianHolidayType.EASTER);
+    final Holidays aConfig = _createConfig (ChristianHolidayType.EASTER);
     s_aParser.parse (2011, aHolidays, aConfig);
     Assert.assertEquals ("Wrong number of aHolidays.", 1, aHolidays.size ());
     final LocalDate aEasterDate = ContainerHelper.getFirstElement (aHolidays.getAllDates ());
@@ -72,7 +72,7 @@ public final class ChristianHolidayParserTest
   public void testChristianInvalidDate ()
   {
     final HolidayMap aHolidays = new HolidayMap ();
-    final Holidays aConfig = createConfig (ChristianHolidayType.EASTER);
+    final Holidays aConfig = _createConfig (ChristianHolidayType.EASTER);
     aConfig.getChristianHoliday ().get (0).setValidTo (Integer.valueOf (2010));
     s_aParser.parse (2011, aHolidays, aConfig);
     Assert.assertEquals ("Wrong number of aHolidays.", 0, aHolidays.size ());
@@ -82,7 +82,7 @@ public final class ChristianHolidayParserTest
   public void testRelativeToEasterSunday ()
   {
     final HolidayMap aHolidays = new HolidayMap ();
-    final Holidays aConfig = createConfig (1);
+    final Holidays aConfig = _createConfig (1);
     final RelativeToEasterSundayParser aParser = new RelativeToEasterSundayParser ();
     aParser.parse (2011, aHolidays, aConfig);
     final List <LocalDate> aExpected = new ArrayList <LocalDate> ();
@@ -97,7 +97,7 @@ public final class ChristianHolidayParserTest
   public void testChristianDates ()
   {
     final HolidayMap aHolidays = new HolidayMap ();
-    final Holidays aConfig = createConfig (ChristianHolidayType.EASTER,
+    final Holidays aConfig = _createConfig (ChristianHolidayType.EASTER,
                                            ChristianHolidayType.CLEAN_MONDAY,
                                            ChristianHolidayType.EASTER_SATURDAY,
                                            ChristianHolidayType.EASTER_TUESDAY,
@@ -126,7 +126,7 @@ public final class ChristianHolidayParserTest
     }
   }
 
-  private static Holidays createConfig (final int... days)
+  private static Holidays _createConfig (final int... days)
   {
     final Holidays aConfig = new Holidays ();
     for (final int day : days)
@@ -139,7 +139,7 @@ public final class ChristianHolidayParserTest
     return aConfig;
   }
 
-  private static Holidays createConfig (final ChristianHolidayType... types)
+  private static Holidays _createConfig (final ChristianHolidayType... types)
   {
     final Holidays aConfig = new Holidays ();
     for (final ChristianHolidayType type : types)
