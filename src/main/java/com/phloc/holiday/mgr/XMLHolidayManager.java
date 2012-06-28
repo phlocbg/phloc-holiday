@@ -29,6 +29,7 @@ import java.util.List;
 import java.util.Set;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import javax.annotation.WillClose;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBElement;
@@ -39,6 +40,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.phloc.commons.annotations.Nonempty;
+import com.phloc.commons.annotations.ReturnsMutableCopy;
 import com.phloc.commons.collections.ArrayHelper;
 import com.phloc.commons.io.resource.ClassPathResource;
 import com.phloc.commons.io.streams.StreamUtils;
@@ -135,6 +137,8 @@ public class XMLHolidayManager extends AbstractHolidayManager
    * @param aConfig
    * @return A list of parsers to for this configuration.
    */
+  @Nonnull
+  @ReturnsMutableCopy
   private static List <IHolidayParser> _getParsers (final Holidays aConfig)
   {
     final List <IHolidayParser> ret = new ArrayList <IHolidayParser> ();
@@ -170,7 +174,7 @@ public class XMLHolidayManager extends AbstractHolidayManager
    * @param aArgs
    * @return the holidays
    */
-  private HolidayMap _getHolidays (final int nYear, final Configuration aConfig, final String [] aArgs)
+  private HolidayMap _getHolidays (final int nYear, final Configuration aConfig, @Nullable final String [] aArgs)
   {
     final HolidayMap aHolidayMap = new HolidayMap ();
     if (s_aLogger.isDebugEnabled ())
