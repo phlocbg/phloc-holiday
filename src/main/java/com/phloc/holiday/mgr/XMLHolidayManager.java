@@ -125,7 +125,7 @@ public class XMLHolidayManager extends AbstractHolidayManager
    * <code>Set&lt;LocalDate&gt; getHolidays(int year, Configuration c, String... args)</code>
    * with the configuration from initialization.
    */
-  public HolidayMap getHolidays (final int nYear, final String... aArgs)
+  public HolidayMap getHolidays (final int nYear, @Nullable final String... aArgs)
   {
     return _getHolidays (nYear, m_aConfiguration, aArgs);
   }
