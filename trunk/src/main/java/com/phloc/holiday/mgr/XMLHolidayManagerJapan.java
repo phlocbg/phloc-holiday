@@ -24,6 +24,8 @@ package com.phloc.holiday.mgr;
 
 import java.util.Map;
 
+import javax.annotation.Nullable;
+
 import org.joda.time.LocalDate;
 
 import com.phloc.commons.locale.country.ECountry;
@@ -54,7 +56,7 @@ public final class XMLHolidayManagerJapan extends XMLHolidayManager
    * between each other than this day is also a holiday.
    */
   @Override
-  public HolidayMap getHolidays (final int nYear, final String... aArgs)
+  public HolidayMap getHolidays (final int nYear, @Nullable final String... aArgs)
   {
     final HolidayMap aHolidays = super.getHolidays (nYear, aArgs);
     final HolidayMap aAdditionalHolidays = new HolidayMap ();
