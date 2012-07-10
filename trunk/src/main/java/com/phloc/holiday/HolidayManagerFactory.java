@@ -59,8 +59,8 @@ public final class HolidayManagerFactory
   static
   {
     // All supported countries
-    s_aSupportedCountries.addAll (RegExHelper.splitToList ("al,ar,at,au,ba,be,bg,bo,br,by,cr,ca,ch,cl,co,cz,de,dk,ec,ee,es,et,fi,fr,gr,hr,hu,ie,is,it,jp,kz,li,lt,lu,lv,md,me,mk,mt,mx,ng,nl,ni,no,pa,pe,pl,pt,py,ro,ru,rs,se,si,sk,ua,uk,us,uy,ve,za",
-                                                           ","));
+    s_aSupportedCountries.addAll (RegExHelper.getSplitToList ("al,ar,at,au,ba,be,bg,bo,br,by,cr,ca,ch,cl,co,cz,de,dk,ec,ee,es,et,fi,fr,gr,hr,hu,ie,is,it,jp,kz,li,lt,lu,lv,md,me,mk,mt,mx,ng,nl,ni,no,pa,pe,pl,pt,py,ro,ru,rs,se,si,sk,ua,uk,us,uy,ve,za",
+                                                              ","));
 
     // register predefined special managers
     registerHolidayManagerClass (XMLHolidayManagerJapan.COUNTRY_ID, XMLHolidayManagerJapan.class);
