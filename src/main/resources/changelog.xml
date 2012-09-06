@@ -25,7 +25,12 @@
 -->
 <changelog xmlns="http://www.phloc.com/ns/changelog/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.phloc.com/ns/changelog/1.0 schemas/changelog-1.0.xsd" version="1.0" component="phloc-holiday">
-  <release date="2012-09-06" version="2.6.6" />
+  <release date="2012-09-06" version="2.6.7" />
+  <entry date="2012-09-06" category="tech" action="update">
+    <change>
+      <text locale="en">Updated dataset with jollyday trunk</text>
+    </change>
+  </entry>
   <entry date="2012-09-05" category="tech" action="update" incompatible="true">
     <change>
       <text locale="en">Updated to phloc-commons 3.8.0-RC1</text>
