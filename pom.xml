@@ -8,7 +8,7 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <artifactId>phloc-holiday</artifactId>
-  <version>2.6.7</version>
+  <version>2.6.8-SNAPSHOT</version>
   <packaging>bundle</packaging>
   <name>phloc-holiday</name>
   <description>phloc holiday calculator and manage</description>
@@ -23,9 +23,9 @@
   </licenses>
   
   <scm>
-    <url>http://code.google.com/p/phloc-holiday/source/browse/tags/phloc-holiday-2.6.7</url>
-    <connection>scm:svn:http://phloc-holiday.googlecode.com/svn/tags/phloc-holiday-2.6.7</connection>
-    <developerConnection>scm:svn:https://phloc-holiday.googlecode.com/svn/tags/phloc-holiday-2.6.7</developerConnection>
+    <url>http://code.google.com/p/phloc-holiday/source/browse/</url>
+    <connection>scm:svn:http://phloc-holiday.googlecode.com/svn/trunk</connection>
+    <developerConnection>scm:svn:https://phloc-holiday.googlecode.com/svn/trunk</developerConnection>
   </scm>
   
   <repositories>
