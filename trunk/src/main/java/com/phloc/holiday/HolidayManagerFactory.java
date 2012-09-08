@@ -37,7 +37,6 @@ import com.phloc.commons.collections.ContainerHelper;
 import com.phloc.commons.lang.ClassHelper;
 import com.phloc.commons.lang.GenericReflection;
 import com.phloc.commons.locale.country.ECountry;
-import com.phloc.commons.regex.RegExHelper;
 import com.phloc.commons.string.StringHelper;
 import com.phloc.holiday.mgr.XMLHolidayManager;
 import com.phloc.holiday.mgr.XMLHolidayManagerJapan;
@@ -59,8 +58,8 @@ public final class HolidayManagerFactory
   static
   {
     // All supported countries
-    s_aSupportedCountries.addAll (RegExHelper.getSplitToList ("al,ar,at,au,ba,be,bg,bo,br,by,cr,ca,ch,cl,co,cz,de,dk,ec,ee,es,et,fi,fr,gr,hr,hu,ie,is,it,jp,kz,li,lt,lu,lv,md,me,mk,mt,mx,ng,nl,ni,no,pa,pe,pl,pt,py,ro,ru,rs,se,si,sk,ua,uk,us,uy,ve,za",
-                                                              ","));
+    s_aSupportedCountries.addAll (StringHelper.getExploded (',',
+                                                            "al,ar,at,au,ba,be,bg,bo,br,by,cr,ca,ch,cl,co,cz,de,dk,ec,ee,es,et,fi,fr,gr,hr,hu,ie,is,it,jp,kz,li,lt,lu,lv,md,me,mk,mt,mx,ng,nl,ni,no,pa,pe,pl,pt,py,ro,ru,rs,se,si,sk,ua,uk,us,uy,ve,za"));
 
     // register predefined special managers
     registerHolidayManagerClass (XMLHolidayManagerJapan.COUNTRY_ID, XMLHolidayManagerJapan.class);
