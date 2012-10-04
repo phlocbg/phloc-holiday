@@ -39,7 +39,7 @@ import com.phloc.holiday.ISingleHoliday;
 
 /**
  * Abstract base class for all holiday manager implementations.
- * 
+ *
  * @author Sven Diedrichsen
  * @author philip
  */
@@ -55,7 +55,7 @@ public abstract class AbstractHolidayManager implements IHolidayManager
 
   /**
    * Calls isHoliday with JODA time object.
-   * 
+   *
    * @see #isHoliday(LocalDate c, String... args)
    */
   public boolean isHoliday (@Nonnull final Calendar aCalendar, final String... args)
@@ -75,7 +75,7 @@ public abstract class AbstractHolidayManager implements IHolidayManager
       throw new NullPointerException ("date");
 
     String sKey = Integer.toString (aDate.getYear ());
-    if (!ArrayHelper.isEmpty (aArgs))
+    if (ArrayHelper.isNotEmpty (aArgs))
     {
       final StringBuilder aKey = new StringBuilder (sKey);
       for (final String sArg : aArgs)
@@ -95,7 +95,7 @@ public abstract class AbstractHolidayManager implements IHolidayManager
    * Returns the configured hierarchy structure for the specific manager. This
    * hierarchy shows how the configured holidays are structured and can be
    * retrieved.
-   * 
+   *
    * @return The hierarchy
    */
   protected abstract CalendarHierarchy getHierarchy ();

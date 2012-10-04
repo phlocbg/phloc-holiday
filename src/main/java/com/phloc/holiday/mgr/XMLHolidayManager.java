@@ -67,7 +67,7 @@ import com.phloc.holiday.parser.impl.RelativeToWeekdayInMonthParser;
  * Manager implementation for reading data from XML files. The files with the
  * name pattern Holidays_[country].xml will be read from the system classpath.
  * It uses a list a parsers for parsing the different type of XML nodes.
- * 
+ *
  * @author Sven Diedrichsen
  * @author philip
  */
@@ -78,7 +78,7 @@ public class XMLHolidayManager extends AbstractHolidayManager
   /**
    * Unmarshals the configuration from the stream. Uses <code>JAXB</code> for
    * this.
-   * 
+   *
    * @param aIS
    * @return The unmarshalled configuration.
    */
@@ -133,7 +133,7 @@ public class XMLHolidayManager extends AbstractHolidayManager
   /**
    * Creates a list of parsers by reading the configuration and trying to find
    * an <code>HolidayParser</code> implementation for by XML class type.
-   * 
+   *
    * @param aConfig
    * @return A list of parsers to for this configuration.
    */
@@ -168,7 +168,7 @@ public class XMLHolidayManager extends AbstractHolidayManager
   /**
    * Parses the provided configuration for the provided year and fills the list
    * of holidays.
-   * 
+   *
    * @param nYear
    * @param aConfig
    * @param aArgs
@@ -183,7 +183,7 @@ public class XMLHolidayManager extends AbstractHolidayManager
     for (final IHolidayParser aParser : _getParsers (aConfig.getHolidays ()))
       aParser.parse (nYear, aHolidayMap, aConfig.getHolidays ());
 
-    if (!ArrayHelper.isEmpty (aArgs))
+    if (ArrayHelper.isNotEmpty (aArgs))
     {
       final String sHierarchy = aArgs[0];
       for (final Configuration aSubConfig : aConfig.getSubConfigurations ())
@@ -239,7 +239,7 @@ public class XMLHolidayManager extends AbstractHolidayManager
 
   /**
    * Creates the configuration hierarchy for the provided configuration.
-   * 
+   *
    * @param aConfig
    * @return configuration hierarchy
    */
