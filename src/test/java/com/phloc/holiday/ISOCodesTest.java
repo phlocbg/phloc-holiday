@@ -22,10 +22,11 @@
  */
 package com.phloc.holiday;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+
 import java.util.HashSet;
 import java.util.Set;
-
-import junit.framework.Assert;
 
 import org.junit.Test;
 
@@ -36,7 +37,7 @@ import com.phloc.commons.locale.country.ECountry;
  * 
  * @author svdi1de
  */
-public class ISOCodesTest
+public final class ISOCodesTest
 {
   private static final int NUMBER_OF_ISOCOUNTRIES = 245;
 
@@ -60,7 +61,7 @@ public class ISOCodesTest
   public void testISOCodes ()
   {
     final Set <String> isoCodes = getISOCodes ();
-    Assert.assertNotNull (isoCodes);
-    Assert.assertEquals ("Wrong number of ISO codes.", NUMBER_OF_ISOCOUNTRIES, isoCodes.size ());
+    assertNotNull (isoCodes);
+    assertEquals ("Wrong number of ISO codes.", NUMBER_OF_ISOCOUNTRIES, isoCodes.size ());
   }
 }

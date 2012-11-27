@@ -22,7 +22,8 @@
  */
 package com.phloc.holiday.parser.impl;
 
-import junit.framework.Assert;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
@@ -50,7 +51,7 @@ public final class FixedWeekdayRelativeToFixedParserTest
     final HolidayMap aHolidays = new HolidayMap ();
     final Holidays config = new Holidays ();
     s_aParser.parse (2011, aHolidays, config);
-    Assert.assertTrue ("Result is not empty.", aHolidays.isEmpty ());
+    assertTrue ("Result is not empty.", aHolidays.isEmpty ());
   }
 
   @Test
@@ -69,7 +70,7 @@ public final class FixedWeekdayRelativeToFixedParserTest
     config.getFixedWeekdayRelativeToFixed ().add (rule);
     rule.setValidTo (Integer.valueOf (2010));
     s_aParser.parse (2011, aHolidays, config);
-    Assert.assertTrue ("Result is not empty.", aHolidays.isEmpty ());
+    assertTrue ("Result is not empty.", aHolidays.isEmpty ());
   }
 
   @Test
@@ -87,10 +88,10 @@ public final class FixedWeekdayRelativeToFixedParserTest
     rule.setDay (fixed);
     config.getFixedWeekdayRelativeToFixed ().add (rule);
     s_aParser.parse (2011, aHolidays, config);
-    Assert.assertEquals ("Wrong number of dates.", 1, aHolidays.size ());
-    Assert.assertEquals ("Wrong date.",
-                         PDTFactory.createLocalDate (2011, 1, 24),
-                         ContainerHelper.getFirstElement (aHolidays.getAllDates ()));
+    assertEquals ("Wrong number of dates.", 1, aHolidays.size ());
+    assertEquals ("Wrong date.",
+                  PDTFactory.createLocalDate (2011, 1, 24),
+                  ContainerHelper.getFirstElement (aHolidays.getAllDates ()));
   }
 
   @Test
@@ -108,10 +109,10 @@ public final class FixedWeekdayRelativeToFixedParserTest
     rule.setDay (fixed);
     config.getFixedWeekdayRelativeToFixed ().add (rule);
     s_aParser.parse (2011, aHolidays, config);
-    Assert.assertEquals ("Wrong number of dates.", 1, aHolidays.size ());
-    Assert.assertEquals ("Wrong date.",
-                         PDTFactory.createLocalDate (2011, 1, 17),
-                         ContainerHelper.getFirstElement (aHolidays.getAllDates ()));
+    assertEquals ("Wrong number of dates.", 1, aHolidays.size ());
+    assertEquals ("Wrong date.",
+                  PDTFactory.createLocalDate (2011, 1, 17),
+                  ContainerHelper.getFirstElement (aHolidays.getAllDates ()));
   }
 
   @Test
@@ -129,10 +130,10 @@ public final class FixedWeekdayRelativeToFixedParserTest
     rule.setDay (fixed);
     config.getFixedWeekdayRelativeToFixed ().add (rule);
     s_aParser.parse (2011, aHolidays, config);
-    Assert.assertEquals ("Wrong number of dates.", 1, aHolidays.size ());
-    Assert.assertEquals ("Wrong date.",
-                         PDTFactory.createLocalDate (2011, 2, 14),
-                         ContainerHelper.getFirstElement (aHolidays.getAllDates ()));
+    assertEquals ("Wrong number of dates.", 1, aHolidays.size ());
+    assertEquals ("Wrong date.",
+                  PDTFactory.createLocalDate (2011, 2, 14),
+                  ContainerHelper.getFirstElement (aHolidays.getAllDates ()));
   }
 
   @Test
@@ -150,9 +151,9 @@ public final class FixedWeekdayRelativeToFixedParserTest
     rule.setDay (fixed);
     config.getFixedWeekdayRelativeToFixed ().add (rule);
     s_aParser.parse (2011, aHolidays, config);
-    Assert.assertEquals ("Wrong number of dates.", 1, aHolidays.size ());
-    Assert.assertEquals ("Wrong date.",
-                         PDTFactory.createLocalDate (2011, 4, 12),
-                         ContainerHelper.getFirstElement (aHolidays.getAllDates ()));
+    assertEquals ("Wrong number of dates.", 1, aHolidays.size ());
+    assertEquals ("Wrong date.",
+                  PDTFactory.createLocalDate (2011, 4, 12),
+                  ContainerHelper.getFirstElement (aHolidays.getAllDates ()));
   }
 }
