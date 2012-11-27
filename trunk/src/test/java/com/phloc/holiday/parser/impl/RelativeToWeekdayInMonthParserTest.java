@@ -22,7 +22,8 @@
  */
 package com.phloc.holiday.parser.impl;
 
-import junit.framework.Assert;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
@@ -50,7 +51,7 @@ public final class RelativeToWeekdayInMonthParserTest
     final HolidayMap aHolidays = new HolidayMap ();
     final Holidays config = new Holidays ();
     s_aParser.parse (2011, aHolidays, config);
-    Assert.assertTrue ("Result is not empty.", aHolidays.isEmpty ());
+    assertTrue ("Result is not empty.", aHolidays.isEmpty ());
   }
 
   @Test
@@ -69,7 +70,7 @@ public final class RelativeToWeekdayInMonthParserTest
     config.getRelativeToWeekdayInMonth ().add (rule);
     rule.setValidFrom (Integer.valueOf (2012));
     s_aParser.parse (2011, aHolidays, config);
-    Assert.assertTrue ("Result is not empty.", aHolidays.isEmpty ());
+    assertTrue ("Result is not empty.", aHolidays.isEmpty ());
   }
 
   @Test
@@ -87,9 +88,9 @@ public final class RelativeToWeekdayInMonthParserTest
     rule.setFixedWeekday (date);
     config.getRelativeToWeekdayInMonth ().add (rule);
     s_aParser.parse (2011, aHolidays, config);
-    Assert.assertEquals ("Wrong number of dates.", 1, aHolidays.size ());
-    Assert.assertEquals ("Wrong date.",
-                         PDTFactory.createLocalDate (2011, 7, 12),
-                         ContainerHelper.getFirstElement (aHolidays.getAllDates ()));
+    assertEquals ("Wrong number of dates.", 1, aHolidays.size ());
+    assertEquals ("Wrong date.",
+                  PDTFactory.createLocalDate (2011, 7, 12),
+                  ContainerHelper.getFirstElement (aHolidays.getAllDates ()));
   }
 }
