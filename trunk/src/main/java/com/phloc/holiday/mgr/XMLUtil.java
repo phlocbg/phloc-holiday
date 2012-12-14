@@ -49,6 +49,7 @@ public final class XMLUtil
    * Returns the {@link DateTimeConstants} value for the given weekday.
    * 
    * @param eWeekday
+   *        Day of week to convert
    * @return {@link DateTimeConstants} value.
    */
   @Nonnegative
@@ -79,6 +80,7 @@ public final class XMLUtil
    * Returns the {@link DateTimeConstants} value for the given month.
    * 
    * @param eMonth
+   *        Month of year to convert
    * @return {@link DateTimeConstants} value.
    */
   @Nonnegative
@@ -140,10 +142,13 @@ public final class XMLUtil
    * Creates the date from the month/day within the specified year.
    * 
    * @param nYear
+   *        Year to created the date for
    * @param aFixed
+   *        The fixed information
    * @return A local date instance.
    */
-  public static LocalDate create (final int nYear, final Fixed aFixed)
+  @Nonnull
+  public static LocalDate create (@Nonnegative final int nYear, @Nonnull final Fixed aFixed)
   {
     return PDTFactory.createLocalDate (nYear, getMonth (aFixed.getMonth ()), aFixed.getDay ().intValue ());
   }

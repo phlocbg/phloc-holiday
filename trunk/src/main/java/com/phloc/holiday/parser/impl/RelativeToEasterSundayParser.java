@@ -89,6 +89,7 @@ public class RelativeToEasterSundayParser extends AbstractHolidayParser
    * Returns the easter Sunday for a given year.
    * 
    * @param nYear
+   *        The year to retrieve Easter Sunday date
    * @return Easter Sunday.
    */
   public static LocalDate getEasterSunday (final int nYear)
@@ -105,6 +106,7 @@ public class RelativeToEasterSundayParser extends AbstractHolidayParser
    * Returns the easter Sunday within the julian chronology.
    * 
    * @param nYear
+   *        The year to retrieve Julian Easter Sunday date
    * @return julian easter Sunday
    */
   public static LocalDate getJulianEasterSunday (final int nYear)
@@ -129,6 +131,7 @@ public class RelativeToEasterSundayParser extends AbstractHolidayParser
    * Returns the easter Sunday within the gregorian chronology.
    * 
    * @param nYear
+   *        The year to retrieve Gregorian Easter Sunday date
    * @return gregorian easter Sunday.
    */
   public static LocalDate getGregorianEasterSunday (final int nYear)

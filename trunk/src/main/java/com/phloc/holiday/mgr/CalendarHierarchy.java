@@ -38,7 +38,7 @@ import com.phloc.commons.string.ToStringGenerator;
 
 /**
  * Bean class for describing the configuration hierarchy.
- *
+ * 
  * @author Sven Diedrichsen
  * @author philip
  */
@@ -51,13 +51,17 @@ public final class CalendarHierarchy implements IHasID <String>
   /**
    * Constructor which takes a eventually existing parent hierarchy node and the
    * ID of this hierarchy.
-   *
+   * 
    * @param aParent
+   *        parent entry
+   * @param sID
+   *        Calendar ID
    * @param eCountry
+   *        Country to use
    */
   public CalendarHierarchy (@Nullable final CalendarHierarchy aParent,
-                           @Nonnull final String sID,
-                           @Nullable final ECountry eCountry)
+                            @Nonnull final String sID,
+                            @Nullable final ECountry eCountry)
   {
     if (sID == null)
       throw new NullPointerException ("id");
@@ -73,7 +77,7 @@ public final class CalendarHierarchy implements IHasID <String>
 
   /**
    * Returns the hierarchies description text from the resource bundle.
-   *
+   * 
    * @param aContentLocale
    *        Locale to return the description text for.
    * @return Description text

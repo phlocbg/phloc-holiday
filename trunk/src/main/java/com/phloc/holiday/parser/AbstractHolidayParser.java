@@ -123,9 +123,11 @@ public abstract class AbstractHolidayParser implements IHolidayParser
    * Determines if the provided date shall be substituted.
    * 
    * @param aFixed
+   *        The date to be checked. May not be <code>null</code>.
    * @param aMoveCond
+   *        The move condition. May not be <code>null</code>.
    */
-  protected static final boolean shallBeMoved (final LocalDate aFixed, final MovingCondition aMoveCond)
+  protected static final boolean shallBeMoved (@Nonnull final LocalDate aFixed, @Nonnull final MovingCondition aMoveCond)
   {
     return aFixed.getDayOfWeek () == XMLUtil.getWeekday (aMoveCond.getSubstitute ());
   }

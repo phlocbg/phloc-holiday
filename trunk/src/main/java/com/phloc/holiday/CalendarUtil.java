@@ -58,8 +58,11 @@ public final class CalendarUtil
    * They occurred on 1/10 and 12/29.
    * 
    * @param nGregorianYear
+   *        Year to convert
    * @param nIslamicMonth
+   *        Month to convert
    * @param nIslamicDay
+   *        Day to convert
    * @return List of gregorian dates for the islamic month/day.
    */
   public static Set <LocalDate> getIslamicHolidaysInGregorianYear (final int nGregorianYear,
@@ -77,11 +80,16 @@ public final class CalendarUtil
    * gregorian year.
    * 
    * @param nTargetMonth
+   *        Target month
    * @param nTargetDay
+   *        Target day
    * @param nGregorianYear
+   *        Gregorian year
    * @param aTargetChronoUTC
+   *        Target chronology
    * @return the list of gregorian dates.
    */
+  @Nonnull
   public static Set <LocalDate> getDatesFromChronologyWithinGregorianYear (final int nTargetMonth,
                                                                            final int nTargetDay,
                                                                            final int nGregorianYear,
@@ -118,8 +126,10 @@ public final class CalendarUtil
    * chronology. If it is already a gregorian date it will return it.
    * 
    * @param aDate
+   *        Date to convert
    */
-  public static LocalDate convertToGregorianDate (final LocalDate aDate)
+  @Nonnull
+  public static LocalDate convertToGregorianDate (@Nonnull final LocalDate aDate)
   {
     return PDTFactory.createLocalDateFromMillis (aDate.toDateTimeAtStartOfDay (PDTConfig.getDateTimeZoneUTC ())
                                                       .getMillis ());
