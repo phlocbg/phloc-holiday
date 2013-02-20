@@ -39,7 +39,7 @@ import com.phloc.commons.locale.country.ECountry;
  */
 public final class ISOCodesTest
 {
-  private static final int NUMBER_OF_ISOCOUNTRIES = 245;
+  private static final int NUMBER_OF_ISOCOUNTRIES = 244;
 
   /**
    * Returns a list of ISO codes.
