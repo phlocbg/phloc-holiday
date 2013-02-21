@@ -53,7 +53,7 @@ public final class XMLUtil
    * @return {@link DateTimeConstants} value.
    */
   @Nonnegative
-  public static int getWeekday (final Weekday eWeekday)
+  public static int getWeekday (@Nonnull final Weekday eWeekday)
   {
     switch (eWeekday)
     {
@@ -84,7 +84,7 @@ public final class XMLUtil
    * @return {@link DateTimeConstants} value.
    */
   @Nonnegative
-  public static int getMonth (final Month eMonth)
+  public static int getMonth (@Nonnull final Month eMonth)
   {
     switch (eMonth)
     {
@@ -120,21 +120,21 @@ public final class XMLUtil
   /**
    * Gets the type.
    * 
-   * @param aType
+   * @param eType
    *        the type of holiday in the config
    * @return the type of holiday
    */
   @Nonnull
-  public static IHolidayType getType (@Nonnull final HolidayType aType)
+  public static IHolidayType getType (@Nonnull final HolidayType eType)
   {
-    switch (aType)
+    switch (eType)
     {
       case OFFICIAL_HOLIDAY:
         return EHolidayType.OFFICIAL_HOLIDAY;
       case UNOFFICIAL_HOLIDAY:
         return EHolidayType.UNOFFICIAL_HOLIDAY;
       default:
-        throw new IllegalArgumentException ("Unknown type " + aType);
+        throw new IllegalArgumentException ("Unknown type " + eType);
     }
   }
 
