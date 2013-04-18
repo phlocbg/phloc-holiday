@@ -24,8 +24,8 @@
   
   <scm>
     <url>http://code.google.com/p/phloc-holiday/source/browse/</url>
-    <connection>scm:svn:http://phloc-holiday.googlecode.com/svn/trunk</connection>
-    <developerConnection>scm:svn:https://phloc-holiday.googlecode.com/svn/trunk</developerConnection>
+    <connection>scm:svn:http://phloc-holiday.googlecode.com/svn/trunk/phloc-holiday</connection>
+    <developerConnection>scm:svn:https://phloc-holiday.googlecode.com/svn/trunk/phloc-holiday</developerConnection>
   </scm>
 
   <organization>
