@@ -40,7 +40,7 @@ import com.phloc.commons.string.ToStringGenerator;
  * Bean class for describing the configuration hierarchy.
  * 
  * @author Sven Diedrichsen
- * @author philip
+ * @author Philip Helger
  */
 public final class CalendarHierarchy implements IHasID <String>
 {

@@ -42,7 +42,7 @@ import com.phloc.commons.string.ToStringGenerator;
 /**
  * Contains a map of holidays, were the key is the date.
  * 
- * @author philip
+ * @author Philip Helger
  */
 public final class HolidayMap
 {

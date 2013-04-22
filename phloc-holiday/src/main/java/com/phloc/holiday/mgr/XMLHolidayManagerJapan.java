@@ -36,7 +36,7 @@ import com.phloc.holiday.ResourceBundleHoliday;
 
 /**
  * @author svdi1de
- * @author philip
+ * @author Philip Helger
  */
 public final class XMLHolidayManagerJapan extends XMLHolidayManager
 {

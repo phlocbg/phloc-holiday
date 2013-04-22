@@ -44,7 +44,7 @@ import com.phloc.holiday.mgr.XMLHolidayManagerJapan;
 /**
  * The main class for creating holiday managers.
  * 
- * @author philip
+ * @author Philip Helger
  */
 public final class HolidayManagerFactory
 {

@@ -37,7 +37,7 @@ import com.phloc.holiday.parser.AbstractHolidayParser;
  * Parses fixed weekday relative to fixed date.
  * 
  * @author Sven Diedrichsen
- * @author philip
+ * @author Philip Helger
  */
 public class FixedWeekdayRelativeToFixedParser extends AbstractHolidayParser
 {

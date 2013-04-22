@@ -34,7 +34,7 @@ import com.phloc.datetime.PDTUtils;
 /**
  * Some holiday utility methods.
  * 
- * @author philip
+ * @author Philip Helger
  */
 @Immutable
 public final class HolidayUtils
