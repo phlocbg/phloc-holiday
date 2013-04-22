@@ -28,7 +28,7 @@ package com.phloc.holiday;
  * (e.g. is the holiday a public holiday or not)
  * 
  * @author tboven
- * @author philip
+ * @author Philip Helger
  */
 public enum EHolidayType implements IHolidayType
 {

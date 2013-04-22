@@ -42,7 +42,7 @@ import com.phloc.commons.text.resource.Utf8ResourceBundle;
  * description.
  * 
  * @author Sven Diedrichsen
- * @author philip
+ * @author Philip Helger
  */
 @Immutable
 public final class ResourceBundleHoliday implements ISingleHoliday

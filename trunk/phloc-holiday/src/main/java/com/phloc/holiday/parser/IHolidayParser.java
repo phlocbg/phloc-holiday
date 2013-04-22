@@ -29,7 +29,7 @@ import com.phloc.holiday.config.Holidays;
 
 /**
  * @author Sven Diedrichsen
- * @author philip
+ * @author Philip Helger
  */
 public interface IHolidayParser
 {

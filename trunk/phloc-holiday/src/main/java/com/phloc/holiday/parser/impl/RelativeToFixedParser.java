@@ -35,7 +35,7 @@ import com.phloc.holiday.parser.AbstractHolidayParser;
 
 /**
  * @author Sven Diedrichsen
- * @author philip
+ * @author Philip Helger
  */
 public class RelativeToFixedParser extends AbstractHolidayParser
 {

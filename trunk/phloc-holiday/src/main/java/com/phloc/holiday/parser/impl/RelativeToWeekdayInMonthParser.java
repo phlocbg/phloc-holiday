@@ -34,7 +34,7 @@ import com.phloc.holiday.mgr.XMLUtil;
 
 /**
  * @author Sven Diedrichsen
- * @author philip
+ * @author Philip Helger
  */
 public class RelativeToWeekdayInMonthParser extends FixedWeekdayInMonthParser
 {

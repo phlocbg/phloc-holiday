@@ -40,7 +40,7 @@ import com.phloc.holiday.parser.AbstractHolidayParser;
  * This parser calculates gregorian dates for the different islamic holidays.
  * 
  * @author Sven Diedrichsen
- * @author philip
+ * @author Philip Helger
  */
 public class IslamicHolidayParser extends AbstractHolidayParser
 {

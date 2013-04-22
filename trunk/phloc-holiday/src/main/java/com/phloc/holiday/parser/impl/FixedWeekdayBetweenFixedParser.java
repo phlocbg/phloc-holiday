@@ -36,7 +36,7 @@ import com.phloc.holiday.parser.AbstractHolidayParser;
  * Parses the configuration for fixed weekdays between two fixed dates.
  * 
  * @author Sven Diedrichsen
- * @author philip
+ * @author Philip Helger
  */
 public class FixedWeekdayBetweenFixedParser extends AbstractHolidayParser
 {

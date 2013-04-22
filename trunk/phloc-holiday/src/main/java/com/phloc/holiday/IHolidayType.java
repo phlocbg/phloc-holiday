@@ -28,7 +28,7 @@ package com.phloc.holiday;
  * holiday or not.
  * 
  * @author tboven
- * @author philip
+ * @author Philip Helger
  */
 public interface IHolidayType
 {

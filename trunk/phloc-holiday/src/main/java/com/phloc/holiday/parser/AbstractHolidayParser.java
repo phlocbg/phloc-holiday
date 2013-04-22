@@ -37,7 +37,7 @@ import com.phloc.holiday.mgr.XMLUtil;
  * The abstract base class for all {@link IHolidayParser} implementations.
  * 
  * @author Sven Diedrichsen
- * @author philip
+ * @author Philip Helger
  */
 @Immutable
 public abstract class AbstractHolidayParser implements IHolidayParser

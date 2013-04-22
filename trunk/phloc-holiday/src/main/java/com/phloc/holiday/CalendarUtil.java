@@ -42,7 +42,7 @@ import com.phloc.datetime.config.PDTConfig;
  * Utility class for date operations.
  * 
  * @author Sven Diedrichsen
- * @author philip
+ * @author Philip Helger
  */
 @Immutable
 public final class CalendarUtil

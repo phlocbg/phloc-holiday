@@ -41,7 +41,7 @@ import com.phloc.holiday.ISingleHoliday;
  * Abstract base class for all holiday manager implementations.
  *
  * @author Sven Diedrichsen
- * @author philip
+ * @author Philip Helger
  */
 public abstract class AbstractHolidayManager implements IHolidayManager
 {

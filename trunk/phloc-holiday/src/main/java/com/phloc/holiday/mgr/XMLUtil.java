@@ -38,7 +38,7 @@ import com.phloc.holiday.config.Weekday;
 
 /**
  * @author svdi1de
- * @author philip
+ * @author Philip Helger
  */
 public final class XMLUtil
 {

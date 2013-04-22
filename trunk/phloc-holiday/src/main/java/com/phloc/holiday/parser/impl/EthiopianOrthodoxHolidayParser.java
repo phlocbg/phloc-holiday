@@ -40,7 +40,7 @@ import com.phloc.holiday.parser.AbstractHolidayParser;
  * Calculates the ethiopian orthodox holidays.
  * 
  * @author Sven Diedrichsen
- * @author philip
+ * @author Philip Helger
  */
 public class EthiopianOrthodoxHolidayParser extends AbstractHolidayParser
 {

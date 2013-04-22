@@ -39,7 +39,7 @@ import com.phloc.holiday.mgr.XMLUtil;
  * sunday.
  * 
  * @author Sven Diedrichsen
- * @author philip
+ * @author Philip Helger
  */
 public class ChristianHolidayParser extends RelativeToEasterSundayParser
 {

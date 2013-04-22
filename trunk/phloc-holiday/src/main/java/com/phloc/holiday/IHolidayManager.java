@@ -30,7 +30,7 @@ import org.joda.time.LocalDate;
 /**
  * Base interface for a holiday manager for one country.
  * 
- * @author philip
+ * @author Philip Helger
  */
 public interface IHolidayManager
 {

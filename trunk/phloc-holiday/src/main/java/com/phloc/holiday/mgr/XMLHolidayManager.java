@@ -69,7 +69,7 @@ import com.phloc.holiday.parser.impl.RelativeToWeekdayInMonthParser;
  * It uses a list a parsers for parsing the different type of XML nodes.
  *
  * @author Sven Diedrichsen
- * @author philip
+ * @author Philip Helger
  */
 public class XMLHolidayManager extends AbstractHolidayManager
 {
