@@ -27,7 +27,7 @@
   xsi:schemaLocation="http://www.phloc.com/ns/changelog/1.0 schemas/changelog-1.0.xsd" version="1.0" component="phloc-holiday">
   <entry date="2013-04-30" category="tech" action="update">
     <change>
-      <text locale="en">Updated to phloc-jaxb22-plugin 2.2.7</text>
+      <text locale="en">Updated to phloc-jaxb22-plugin 2.2.7.1</text>
     </change>
   </entry>
   <entry date="2013-04-17" category="tech" action="update">
