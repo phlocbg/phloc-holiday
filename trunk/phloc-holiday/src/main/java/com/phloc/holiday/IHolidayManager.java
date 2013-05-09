@@ -60,7 +60,7 @@ public interface IHolidayManager
   ISingleHoliday getHoliday (@Nonnull LocalDate aDate, @Nullable String... aArgs);
 
   /**
-   * Returns the the holidays for the requested year and hierarchy structure.
+   * Returns the holidays for the requested year and hierarchy structure.
    * 
    * @param nYear
    *        i.e. 2010
