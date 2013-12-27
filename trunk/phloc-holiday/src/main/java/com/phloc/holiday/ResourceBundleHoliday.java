@@ -33,9 +33,9 @@ import javax.annotation.concurrent.Immutable;
 import com.phloc.commons.equals.EqualsUtils;
 import com.phloc.commons.hash.HashCodeGenerator;
 import com.phloc.commons.lang.ClassHelper;
+import com.phloc.commons.string.StringHelper;
 import com.phloc.commons.string.ToStringGenerator;
 import com.phloc.commons.text.resource.ResourceBundleKey;
-import com.phloc.commons.text.resource.Utf8ResourceBundle;
 
 /**
  * Represents the holiday and contains the actual date and an localized
@@ -64,11 +64,9 @@ public final class ResourceBundleHoliday implements ISingleHoliday
     if (aType == null)
       throw new NullPointerException ("type");
     m_bIsOfficial = aType.isOfficialHoliday ();
-    m_aRBKey = com.phloc.commons.string.StringHelper.hasNoText (sPropertiesKey)
-                                                                               ? null
-                                                                               : new ResourceBundleKey ("descriptions.holiday_descriptions",
-                                                                                                        "holiday.description." +
-                                                                                                            sPropertiesKey);
+    m_aRBKey = StringHelper.hasNoText (sPropertiesKey) ? null
+                                                      : new ResourceBundleKey ("descriptions.holiday_descriptions",
+                                                                               "holiday.description." + sPropertiesKey);
   }
 
   public boolean isOfficialHoliday ()
@@ -88,9 +86,9 @@ public final class ResourceBundleHoliday implements ISingleHoliday
     {
       try
       {
-        final ResourceBundle aBundle = Utf8ResourceBundle.getBundle (m_aRBKey.getBundleName (),
-                                                                     aLocale,
-                                                                     ClassHelper.getDefaultClassLoader ());
+        final ResourceBundle aBundle = ResourceBundle.getBundle (m_aRBKey.getBundleName (),
+                                                                 aLocale,
+                                                                 ClassHelper.getDefaultClassLoader ());
         ret = aBundle.getString (m_aRBKey.getKey ());
       }
       catch (final MissingResourceException ex)
