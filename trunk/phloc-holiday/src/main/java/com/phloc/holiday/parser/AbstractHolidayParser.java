@@ -119,6 +119,7 @@ public abstract class AbstractHolidayParser implements IHolidayParser
            (aHoliday.getValidTo () == null || aHoliday.getValidTo ().intValue () >= nYear);
   }
 
+
   /**
    * Determines if the provided date shall be substituted.
    * 

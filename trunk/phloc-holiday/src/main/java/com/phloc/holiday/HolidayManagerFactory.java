@@ -24,6 +24,7 @@ package com.phloc.holiday;
 
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.locks.ReadWriteLock;
@@ -89,6 +90,12 @@ public final class HolidayManagerFactory
     {
       s_aRWLock.writeLock ().unlock ();
     }
+  }
+
+  @Nonnull
+  public static IHolidayManager getDefaultHolidayManager ()
+  {
+    return getHolidayManager (Locale.getDefault ().getCountry ());
   }
 
   @Nonnull

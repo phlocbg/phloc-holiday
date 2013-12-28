@@ -22,8 +22,13 @@
  */
 package com.phloc.holiday;
 
+import static org.junit.Assert.assertTrue;
+
+import org.joda.time.LocalDate;
 import org.junit.Test;
 
+import com.phloc.commons.locale.country.ECountry;
+import com.phloc.datetime.PDTFactory;
 import com.phloc.holiday.mgr.AbstractCountryTestBase;
 
 public class HolidayUKTest extends AbstractCountryTestBase
@@ -38,4 +43,31 @@ public class HolidayUKTest extends AbstractCountryTestBase
     validateCalendarData (ISO_CODE, YEAR);
   }
 
+  @Test
+  public void testManagerUKChristmasMovingDaysWhenChristimasOnSunday ()
+  {
+    doChristmasContainmentTest (2011, 26, 27);
+  }
+
+  @Test
+  public void testManagerUKChristmasMovingDaysWhenChristimasOnSaturday ()
+  {
+    doChristmasContainmentTest (2010, 27, 28);
+  }
+
+  @Test
+  public void testManagerUKChristmasMovingDaysWhenChristimasOnFriday ()
+  {
+    doChristmasContainmentTest (2009, 25, 28);
+  }
+
+  private void doChristmasContainmentTest (final int year, final int dayOfChristmas, final int dayOfBoxingday)
+  {
+    final LocalDate christmas = PDTFactory.createLocalDate (year, 12, dayOfChristmas);
+    final LocalDate boxingday = PDTFactory.createLocalDate (year, 12, dayOfBoxingday);
+    final IHolidayManager holidayManager = HolidayManagerFactory.getHolidayManager (ECountry.UK);
+    final HolidayMap holidays = holidayManager.getHolidays (year);
+    assertTrue ("There should be christmas on " + christmas, holidays.containsHolidayForDate (christmas));
+    assertTrue ("There should be boxing day on " + boxingday, holidays.containsHolidayForDate (boxingday));
+  }
 }

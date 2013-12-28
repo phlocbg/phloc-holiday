@@ -111,5 +111,4 @@ public final class CalendarUtilTest
     assertEquals ("Wrong number of islamic IdAlFitr holidays in 2009.", expected.size (), holidays.size ());
     assertEquals ("Wrong islamic IdAlFitr holidays in 2009.", expected, holidays);
   }
-
 }

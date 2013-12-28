@@ -30,7 +30,9 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 import org.joda.time.LocalDate;
+import org.joda.time.ReadableInterval;
 
+import com.phloc.commons.annotations.ReturnsMutableCopy;
 import com.phloc.commons.collections.ArrayHelper;
 import com.phloc.datetime.PDTFactory;
 import com.phloc.holiday.HolidayMap;
@@ -39,7 +41,7 @@ import com.phloc.holiday.ISingleHoliday;
 
 /**
  * Abstract base class for all holiday manager implementations.
- *
+ * 
  * @author Sven Diedrichsen
  * @author Philip Helger
  */
@@ -55,7 +57,7 @@ public abstract class AbstractHolidayManager implements IHolidayManager
 
   /**
    * Calls isHoliday with JODA time object.
-   *
+   * 
    * @see #isHoliday(LocalDate c, String... args)
    */
   public boolean isHoliday (@Nonnull final Calendar aCalendar, final String... args)
@@ -68,12 +70,9 @@ public abstract class AbstractHolidayManager implements IHolidayManager
     return getHoliday (aDate, aArgs) != null;
   }
 
-  @Nullable
-  public ISingleHoliday getHoliday (@Nonnull final LocalDate aDate, @Nullable final String... aArgs)
+  @Nonnull
+  private static String _getKey (@Nonnull final LocalDate aDate, @Nullable final String... aArgs)
   {
-    if (aDate == null)
-      throw new NullPointerException ("date");
-
     String sKey = Integer.toString (aDate.getYear ());
     if (ArrayHelper.isNotEmpty (aArgs))
     {
@@ -82,6 +81,16 @@ public abstract class AbstractHolidayManager implements IHolidayManager
         aKey.append ('_').append (sArg);
       sKey = aKey.toString ();
     }
+    return sKey;
+  }
+
+  @Nullable
+  public ISingleHoliday getHoliday (@Nonnull final LocalDate aDate, @Nullable final String... aArgs)
+  {
+    if (aDate == null)
+      throw new NullPointerException ("date");
+
+    final String sKey = _getKey (aDate, aArgs);
     HolidayMap aHolidayMap = m_aHolidaysPerYear.get (sKey);
     if (aHolidayMap == null)
     {
@@ -91,11 +100,29 @@ public abstract class AbstractHolidayManager implements IHolidayManager
     return aHolidayMap.getHolidayForDate (aDate);
   }
 
+  @Nonnull
+  @ReturnsMutableCopy
+  public HolidayMap getHolidays (@Nonnull final ReadableInterval aInterval, @Nullable final String... aArgs)
+  {
+    if (aInterval == null)
+      throw new NullPointerException ("Interval is NULL.");
+
+    final HolidayMap aHolidayMap = new HolidayMap ();
+    for (int nYear = aInterval.getStart ().getYear (); nYear <= aInterval.getEnd ().getYear (); nYear++)
+    {
+      final HolidayMap yearHolidays = getHolidays (nYear, aArgs);
+      for (final Map.Entry <LocalDate, ISingleHoliday> aEntry : yearHolidays.getMap ().entrySet ())
+        if (aInterval.contains (aEntry.getKey ().toDateTimeAtStartOfDay ()))
+          aHolidayMap.add (aEntry.getKey (), aEntry.getValue ());
+    }
+    return aHolidayMap;
+  }
+
   /**
    * Returns the configured hierarchy structure for the specific manager. This
    * hierarchy shows how the configured holidays are structured and can be
    * retrieved.
-   *
+   * 
    * @return The hierarchy
    */
   protected abstract CalendarHierarchy getHierarchy ();

@@ -28,7 +28,6 @@ import com.phloc.holiday.mgr.AbstractCountryTestBase;
 
 public class HolidayBGTest extends AbstractCountryTestBase
 {
-
   private static final String ISO_CODE = "bg";
   private static final int YEAR = 2010;
 
@@ -37,5 +36,4 @@ public class HolidayBGTest extends AbstractCountryTestBase
   {
     validateCalendarData (ISO_CODE, YEAR);
   }
-
 }
