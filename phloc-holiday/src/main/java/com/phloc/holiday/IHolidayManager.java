@@ -26,6 +26,7 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 import org.joda.time.LocalDate;
+import org.joda.time.ReadableInterval;
 
 /**
  * Base interface for a holiday manager for one country.
@@ -71,4 +72,16 @@ public interface IHolidayManager
    */
   @Nonnull
   HolidayMap getHolidays (int nYear, @Nullable String... aArgs);
+
+  /**
+   * Returns the holidays for the requested interval and hierarchy structure.
+   * 
+   * @param aInterval
+   *        the interval in which the holidays lie.
+   * @param aArgs
+   *        a {@link java.lang.String} object.
+   * @return list of holidays within the interval
+   */
+  @Nonnull
+  HolidayMap getHolidays (@Nonnull ReadableInterval aInterval, @Nullable String... aArgs);
 }

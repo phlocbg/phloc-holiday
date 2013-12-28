@@ -67,7 +67,7 @@ import com.phloc.holiday.parser.impl.RelativeToWeekdayInMonthParser;
  * Manager implementation for reading data from XML files. The files with the
  * name pattern Holidays_[country].xml will be read from the system classpath.
  * It uses a list a parsers for parsing the different type of XML nodes.
- *
+ * 
  * @author Sven Diedrichsen
  * @author Philip Helger
  */
@@ -78,7 +78,7 @@ public class XMLHolidayManager extends AbstractHolidayManager
   /**
    * Unmarshals the configuration from the stream. Uses <code>JAXB</code> for
    * this.
-   *
+   * 
    * @param aIS
    * @return The unmarshalled configuration.
    */
@@ -133,13 +133,13 @@ public class XMLHolidayManager extends AbstractHolidayManager
   /**
    * Creates a list of parsers by reading the configuration and trying to find
    * an <code>HolidayParser</code> implementation for by XML class type.
-   *
+   * 
    * @param aConfig
    * @return A list of parsers to for this configuration.
    */
   @Nonnull
   @ReturnsMutableCopy
-  private static List <IHolidayParser> _getParsers (final Holidays aConfig)
+  private static List <IHolidayParser> _getParsers (@Nonnull final Holidays aConfig)
   {
     final List <IHolidayParser> ret = new ArrayList <IHolidayParser> ();
     if (!aConfig.getChristianHoliday ().isEmpty ())
@@ -168,18 +168,22 @@ public class XMLHolidayManager extends AbstractHolidayManager
   /**
    * Parses the provided configuration for the provided year and fills the list
    * of holidays.
-   *
+   * 
    * @param nYear
    * @param aConfig
    * @param aArgs
    * @return the holidays
    */
-  private HolidayMap _getHolidays (final int nYear, final Configuration aConfig, @Nullable final String [] aArgs)
+  @Nonnull
+  @ReturnsMutableCopy
+  private HolidayMap _getHolidays (final int nYear,
+                                   @Nonnull final Configuration aConfig,
+                                   @Nullable final String... aArgs)
   {
-    final HolidayMap aHolidayMap = new HolidayMap ();
     if (s_aLogger.isDebugEnabled ())
       s_aLogger.debug ("Adding holidays for " + aConfig.getDescription ());
 
+    final HolidayMap aHolidayMap = new HolidayMap ();
     for (final IHolidayParser aParser : _getParsers (aConfig.getHolidays ()))
       aParser.parse (nYear, aHolidayMap, aConfig.getHolidays ());
 
@@ -239,7 +243,7 @@ public class XMLHolidayManager extends AbstractHolidayManager
 
   /**
    * Creates the configuration hierarchy for the provided configuration.
-   *
+   * 
    * @param aConfig
    * @return configuration hierarchy
    */
