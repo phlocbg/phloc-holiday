@@ -1,0 +1,318 @@
+# Enerjy Software baseline data (files=46, problems=271).
+path: /phloc-holiday/src/main/java/com/phloc/holiday/CalendarUtil.java
+problem: JAVA0110:JAVA0110 Incorrect javadoc: no @return tag
+path: /phloc-holiday/src/main/java/com/phloc/holiday/HolidayManagerFactory.java
+problem: JAVA0177:JAVA0177 Variable declaration 'aMgr' missing initializer
+path: /phloc-holiday/src/main/java/com/phloc/holiday/HolidayMap.java
+problem: JAVA0057:JAVA0057 Unnecessary default constructor 'HolidayMap'
+path: /phloc-holiday/src/main/java/com/phloc/holiday/ResourceBundleHoliday.java
+problem: JAVA0108:JAVA0108 Incorrect javadoc: no @param tag for 'aType'
+problem: JAVA0108:JAVA0108 Incorrect javadoc: no @param tag for 'sPropertiesKey'
+path: /phloc-holiday/src/main/java/com/phloc/holiday/mgr/AbstractHolidayManager.java
+problem: JAVA0110:JAVA0110 Incorrect javadoc: no @return tag
+problem: JAVA0108:JAVA0108 Incorrect javadoc: no @param tag for 'aCalendar'
+problem: JAVA0108:JAVA0108 Incorrect javadoc: no @param tag for 'args'
+path: /phloc-holiday/src/main/java/com/phloc/holiday/mgr/XMLHolidayManager.java
+problem: JAVA0110:JAVA0110 Incorrect javadoc: no @return tag
+problem: JAVA0108:JAVA0108 Incorrect javadoc: no @param tag for 'aConfig'
+problem: JAVA0110:JAVA0110 Incorrect javadoc: no @return tag
+problem: JAVA0108:JAVA0108 Incorrect javadoc: no @param tag for 'aParent'
+path: /phloc-holiday/src/main/java/com/phloc/holiday/mgr/XMLHolidayManagerJapan.java
+problem: JAVA0110:JAVA0110 Incorrect javadoc: no @return tag
+path: /phloc-holiday/src/main/java/com/phloc/holiday/mgr/XMLUtil.java
+problem: JAVA0040:JAVA0040 Switch statement contains 13 cases (maximum: 10)
+path: /phloc-holiday/src/main/java/com/phloc/holiday/parser/AbstractHolidayParser.java
+problem: JAVA0011:JAVA0011 Abstract class 'AbstractHolidayParser' does not contain an abstract method
+problem: JAVA0110:JAVA0110 Incorrect javadoc: no @return tag
+path: /phloc-holiday/src/main/java/com/phloc/holiday/parser/impl/ChristianHolidayParser.java
+problem: JAVA0177:JAVA0177 Variable declaration 'aEasterSunday' missing initializer
+problem: JAVA0040:JAVA0040 Switch statement contains 16 cases (maximum: 10)
+path: /phloc-holiday/src/main/java/com/phloc/holiday/parser/impl/EthiopianOrthodoxHolidayParser.java
+problem: JAVA0177:JAVA0177 Variable declaration 'aEthiopianHolidays' missing initializer
+path: /phloc-holiday/src/main/java/com/phloc/holiday/parser/impl/FixedWeekdayInMonthParser.java
+problem: JAVA0032:JAVA0032 Switch statement missing default
+path: /phloc-holiday/src/main/java/com/phloc/holiday/parser/impl/FixedWeekdayRelativeToFixedParser.java
+problem: JAVA0032:JAVA0032 Switch statement missing default
+path: /phloc-holiday/src/main/java/com/phloc/holiday/parser/impl/IslamicHolidayParser.java
+problem: JAVA0177:JAVA0177 Variable declaration 'aIslamicHolidays' missing initializer
+problem: JAVA0076:JAVA0076 Use of magic number '10'
+problem: JAVA0076:JAVA0076 Use of magic number '10'
+problem: JAVA0076:JAVA0076 Use of magic number '27'
+problem: JAVA0076:JAVA0076 Use of magic number '27'
+path: /phloc-holiday/src/main/java/com/phloc/holiday/parser/impl/RelativeToEasterSundayParser.java
+problem: JAVA0177:JAVA0177 Variable declaration 'a' missing initializer
+problem: JAVA0177:JAVA0177 Variable declaration 'b' missing initializer
+problem: JAVA0177:JAVA0177 Variable declaration 'c' missing initializer
+problem: JAVA0177:JAVA0177 Variable declaration 'd' missing initializer
+problem: JAVA0177:JAVA0177 Variable declaration 'e' missing initializer
+problem: JAVA0177:JAVA0177 Variable declaration 'x' missing initializer
+problem: JAVA0177:JAVA0177 Variable declaration 'nMonth' missing initializer
+problem: JAVA0177:JAVA0177 Variable declaration 'nDay' missing initializer
+problem: JAVA0076:JAVA0076 Use of magic number '7'
+problem: JAVA0076:JAVA0076 Use of magic number '19'
+problem: JAVA0076:JAVA0076 Use of magic number '19'
+problem: JAVA0076:JAVA0076 Use of magic number '15'
+problem: JAVA0076:JAVA0076 Use of magic number '30'
+problem: JAVA0076:JAVA0076 Use of magic number '7'
+problem: JAVA0076:JAVA0076 Use of magic number '114'
+problem: JAVA0076:JAVA0076 Use of magic number '31'
+problem: JAVA0076:JAVA0076 Use of magic number '31'
+problem: JAVA0177:JAVA0177 Variable declaration 'a' missing initializer
+problem: JAVA0177:JAVA0177 Variable declaration 'b' missing initializer
+problem: JAVA0177:JAVA0177 Variable declaration 'c' missing initializer
+problem: JAVA0177:JAVA0177 Variable declaration 'd' missing initializer
+problem: JAVA0177:JAVA0177 Variable declaration 'e' missing initializer
+problem: JAVA0177:JAVA0177 Variable declaration 'f' missing initializer
+problem: JAVA0177:JAVA0177 Variable declaration 'g' missing initializer
+problem: JAVA0177:JAVA0177 Variable declaration 'h' missing initializer
+problem: JAVA0177:JAVA0177 Variable declaration 'i' missing initializer
+problem: JAVA0177:JAVA0177 Variable declaration 'j' missing initializer
+problem: JAVA0177:JAVA0177 Variable declaration 'k' missing initializer
+problem: JAVA0177:JAVA0177 Variable declaration 'l' missing initializer
+problem: JAVA0177:JAVA0177 Variable declaration 'x' missing initializer
+problem: JAVA0177:JAVA0177 Variable declaration 'nMonth' missing initializer
+problem: JAVA0177:JAVA0177 Variable declaration 'nDay' missing initializer
+problem: JAVA0076:JAVA0076 Use of magic number '19'
+problem: JAVA0076:JAVA0076 Use of magic number '100'
+problem: JAVA0076:JAVA0076 Use of magic number '100'
+problem: JAVA0076:JAVA0076 Use of magic number '19'
+problem: JAVA0076:JAVA0076 Use of magic number '15'
+problem: JAVA0076:JAVA0076 Use of magic number '30'
+problem: JAVA0076:JAVA0076 Use of magic number '7'
+problem: JAVA0076:JAVA0076 Use of magic number '7'
+problem: JAVA0076:JAVA0076 Use of magic number '114'
+problem: JAVA0076:JAVA0076 Use of magic number '31'
+problem: JAVA0076:JAVA0076 Use of magic number '31'
+path: /phloc-holiday/src/test/java/com/phloc/holiday/CalendarUtilTest.java
+problem: JAVA0076:JAVA0076 Use of magic number '2008'
+problem: JAVA0076:JAVA0076 Use of magic number '10'
+problem: JAVA0076:JAVA0076 Use of magic number '2008'
+problem: JAVA0076:JAVA0076 Use of magic number '2008'
+problem: JAVA0076:JAVA0076 Use of magic number '2009'
+problem: JAVA0076:JAVA0076 Use of magic number '2009'
+problem: JAVA0076:JAVA0076 Use of magic number '2008'
+problem: JAVA0076:JAVA0076 Use of magic number '2009'
+path: /phloc-holiday/src/test/java/com/phloc/holiday/ISOCodesTest.java
+problem: JAVA0065:JAVA0065 Unnecessary final modifier for method 'getISOCodes' in final class
+path: /phloc-holiday/src/test/java/com/phloc/holiday/mgr/AbstractCountryTestBase.java
+problem: JAVA0011:JAVA0011 Abstract class 'AbstractCountryTestBase' does not contain an abstract method
+problem: JAVA0160:JAVA0160 Method 'validateCalendarData' does not throw specified exception 'java.lang.Exception'
+path: /phloc-holiday/src/test/java/com/phloc/holiday/mgr/HolidayTest.java
+problem: JAVA0076:JAVA0076 Use of magic number '2010'
+problem: JAVA0076:JAVA0076 Use of magic number '17'
+problem: JAVA0076:JAVA0076 Use of magic number '2010'
+problem: JAVA0076:JAVA0076 Use of magic number '2010'
+problem: JAVA0076:JAVA0076 Use of magic number '2010'
+problem: JAVA0076:JAVA0076 Use of magic number '2010'
+problem: JAVA0076:JAVA0076 Use of magic number '17'
+problem: JAVA0076:JAVA0076 Use of magic number '2010'
+problem: JAVA0076:JAVA0076 Use of magic number '2010'
+problem: JAVA0076:JAVA0076 Use of magic number '2010'
+problem: JAVA0076:JAVA0076 Use of magic number '2010'
+problem: JAVA0076:JAVA0076 Use of magic number '26'
+problem: JAVA0076:JAVA0076 Use of magic number '2010'
+problem: JAVA0076:JAVA0076 Use of magic number '2010'
+problem: JAVA0076:JAVA0076 Use of magic number '2010'
+problem: JAVA0076:JAVA0076 Use of magic number '2010'
+problem: JAVA0076:JAVA0076 Use of magic number '2010'
+problem: JAVA0076:JAVA0076 Use of magic number '26'
+problem: JAVA0076:JAVA0076 Use of magic number '2010'
+problem: JAVA0076:JAVA0076 Use of magic number '2010'
+problem: JAVA0076:JAVA0076 Use of magic number '2010'
+problem: JAVA0076:JAVA0076 Use of magic number '2010'
+problem: JAVA0076:JAVA0076 Use of magic number '17'
+problem: JAVA0076:JAVA0076 Use of magic number '2010'
+problem: JAVA0076:JAVA0076 Use of magic number '2010'
+problem: JAVA0076:JAVA0076 Use of magic number '17'
+problem: JAVA0160:JAVA0160 Method 'testMissingCountry' does not throw specified exception 'java.lang.Exception'
+problem: JAVA0160:JAVA0160 Method 'testBaseStructure' does not throw specified exception 'java.lang.Exception'
+problem: JAVA0160:JAVA0160 Method 'testIsHolidayPerformance' does not throw specified exception 'java.lang.Exception'
+problem: JAVA0076:JAVA0076 Use of magic number '2010'
+problem: JAVA0160:JAVA0160 Method 'testCalendarChronology' does not throw specified exception 'java.lang.Exception'
+problem: JAVA0076:JAVA0076 Use of magic number '2010'
+problem: JAVA0160:JAVA0160 Method 'testChronology' does not throw specified exception 'java.lang.Exception'
+problem: JAVA0160:JAVA0160 Method 'testBaseDates' does not throw specified exception 'java.lang.Exception'
+problem: JAVA0130:JAVA0130 Non-static method 'assertDates' does not use instance fields
+problem: JAVA0160:JAVA0160 Method 'testLevel1' does not throw specified exception 'java.lang.Exception'
+problem: JAVA0160:JAVA0160 Method 'testLevel2' does not throw specified exception 'java.lang.Exception'
+problem: JAVA0160:JAVA0160 Method 'testLevel11' does not throw specified exception 'java.lang.Exception'
+problem: JAVA0160:JAVA0160 Method 'testAllAvailableManagers' does not throw specified exception 'java.lang.Exception'
+path: /phloc-holiday/src/test/java/com/phloc/holiday/mgr/HolidaysATTest.java
+problem: JAVA0076:JAVA0076 Use of magic number '2010'
+problem: JAVA0076:JAVA0076 Use of magic number '2010'
+path: /phloc-holiday/src/test/java/com/phloc/holiday/parser/impl/ChristianHolidayParserTest.java
+problem: JAVA0076:JAVA0076 Use of magic number '2010'
+problem: JAVA0076:JAVA0076 Use of magic number '2011'
+problem: JAVA0076:JAVA0076 Use of magic number '2010'
+problem: JAVA0076:JAVA0076 Use of magic number '2011'
+problem: JAVA0076:JAVA0076 Use of magic number '2011'
+problem: JAVA0076:JAVA0076 Use of magic number '2011'
+problem: JAVA0076:JAVA0076 Use of magic number '24'
+problem: JAVA0076:JAVA0076 Use of magic number '2011'
+problem: JAVA0076:JAVA0076 Use of magic number '2011'
+problem: JAVA0076:JAVA0076 Use of magic number '7'
+problem: JAVA0076:JAVA0076 Use of magic number '2011'
+problem: JAVA0076:JAVA0076 Use of magic number '2011'
+problem: JAVA0076:JAVA0076 Use of magic number '24'
+problem: JAVA0076:JAVA0076 Use of magic number '2011'
+problem: JAVA0076:JAVA0076 Use of magic number '2011'
+problem: JAVA0076:JAVA0076 Use of magic number '2011'
+problem: JAVA0076:JAVA0076 Use of magic number '2011'
+problem: JAVA0076:JAVA0076 Use of magic number '7'
+path: /phloc-holiday/src/test/java/com/phloc/holiday/parser/impl/EthiopianOrthodoxHolidayParserTest.java
+problem: JAVA0076:JAVA0076 Use of magic number '2010'
+problem: JAVA0076:JAVA0076 Use of magic number '2010'
+problem: JAVA0076:JAVA0076 Use of magic number '2010'
+problem: JAVA0076:JAVA0076 Use of magic number '2010'
+problem: JAVA0076:JAVA0076 Use of magic number '9'
+problem: JAVA0076:JAVA0076 Use of magic number '2010'
+problem: JAVA0076:JAVA0076 Use of magic number '9'
+problem: JAVA0108:JAVA0108 Incorrect javadoc: no @param tag for 'type'
+path: /phloc-holiday/src/test/java/com/phloc/holiday/parser/impl/FixedParserTest.java
+problem: JAVA0076:JAVA0076 Use of magic number '2010'
+problem: JAVA0076:JAVA0076 Use of magic number '2010'
+problem: JAVA0076:JAVA0076 Use of magic number '2010'
+problem: JAVA0076:JAVA0076 Use of magic number '2011'
+problem: JAVA0076:JAVA0076 Use of magic number '2011'
+problem: JAVA0076:JAVA0076 Use of magic number '2011'
+problem: JAVA0076:JAVA0076 Use of magic number '2010'
+problem: JAVA0076:JAVA0076 Use of magic number '2011'
+problem: JAVA0076:JAVA0076 Use of magic number '2010'
+problem: JAVA0130:JAVA0130 Non-static method '_containsAll' does not use instance fields
+path: /phloc-holiday/src/test/java/com/phloc/holiday/parser/impl/FixedWeekdayBetweenFixedParserTest.java
+problem: JAVA0076:JAVA0076 Use of magic number '2010'
+problem: JAVA0076:JAVA0076 Use of magic number '2010'
+problem: JAVA0076:JAVA0076 Use of magic number '2011'
+problem: JAVA0076:JAVA0076 Use of magic number '2011'
+path: /phloc-holiday/src/test/java/com/phloc/holiday/parser/impl/FixedWeekdayInMonthParserTest.java
+problem: JAVA0076:JAVA0076 Use of magic number '2010'
+problem: JAVA0076:JAVA0076 Use of magic number '2010'
+path: /phloc-holiday/src/test/java/com/phloc/holiday/parser/impl/FixedWeekdayRelativeToFixedParserTest.java
+problem: JAVA0076:JAVA0076 Use of magic number '2011'
+problem: JAVA0076:JAVA0076 Use of magic number '29'
+problem: JAVA0076:JAVA0076 Use of magic number '2011'
+problem: JAVA0076:JAVA0076 Use of magic number '29'
+problem: JAVA0076:JAVA0076 Use of magic number '2011'
+problem: JAVA0076:JAVA0076 Use of magic number '2011'
+problem: JAVA0076:JAVA0076 Use of magic number '29'
+problem: JAVA0076:JAVA0076 Use of magic number '2011'
+problem: JAVA0076:JAVA0076 Use of magic number '2011'
+problem: JAVA0076:JAVA0076 Use of magic number '29'
+problem: JAVA0076:JAVA0076 Use of magic number '2011'
+problem: JAVA0076:JAVA0076 Use of magic number '2011'
+problem: JAVA0076:JAVA0076 Use of magic number '2011'
+problem: JAVA0076:JAVA0076 Use of magic number '2011'
+path: /phloc-holiday/src/test/java/com/phloc/holiday/parser/impl/RelativeToFixedParserTest.java
+problem: JAVA0076:JAVA0076 Use of magic number '2010'
+problem: JAVA0076:JAVA0076 Use of magic number '2011'
+problem: JAVA0076:JAVA0076 Use of magic number '2010'
+problem: JAVA0076:JAVA0076 Use of magic number '2011'
+problem: JAVA0076:JAVA0076 Use of magic number '2011'
+problem: JAVA0076:JAVA0076 Use of magic number '8'
+problem: JAVA0076:JAVA0076 Use of magic number '2011'
+problem: JAVA0076:JAVA0076 Use of magic number '2011'
+problem: JAVA0076:JAVA0076 Use of magic number '8'
+path: /phloc-holiday/src/test/java/com/phloc/holiday/parser/impl/RelativeToWeekdayInMonthParserTest.java
+problem: JAVA0076:JAVA0076 Use of magic number '2011'
+problem: JAVA0076:JAVA0076 Use of magic number '2011'
+problem: JAVA0076:JAVA0076 Use of magic number '2011'
+problem: JAVA0076:JAVA0076 Use of magic number '2011'
+path: /phloc-holiday/target/generated-sources/xjc/com/phloc/holiday/config/ChristianHoliday.java
+problem: JAVA0137:JAVA0137 Non-abstract class 'ChristianHoliday' missing constructor
+problem: JAVA0234:JAVA0234 Class 'ChristianHoliday' is Serializable but does not define serialVersionUID
+problem: JAVA0098:JAVA0098 Minimize use of implicit field initializers
+path: /phloc-holiday/target/generated-sources/xjc/com/phloc/holiday/config/Configuration.java
+problem: JAVA0137:JAVA0137 Non-abstract class 'Configuration' missing constructor
+problem: JAVA0234:JAVA0234 Class 'Configuration' is Serializable but does not define serialVersionUID
+problem: JAVA0098:JAVA0098 Minimize use of implicit field initializers
+problem: JAVA0110:JAVA0110 Incorrect javadoc: no @return tag
+path: /phloc-holiday/target/generated-sources/xjc/com/phloc/holiday/config/EthiopianOrthodoxHoliday.java
+problem: JAVA0137:JAVA0137 Non-abstract class 'EthiopianOrthodoxHoliday' missing constructor
+problem: JAVA0234:JAVA0234 Class 'EthiopianOrthodoxHoliday' is Serializable but does not define serialVersionUID
+path: /phloc-holiday/target/generated-sources/xjc/com/phloc/holiday/config/Fixed.java
+problem: JAVA0137:JAVA0137 Non-abstract class 'Fixed' missing constructor
+problem: JAVA0234:JAVA0234 Class 'Fixed' is Serializable but does not define serialVersionUID
+problem: JAVA0098:JAVA0098 Minimize use of implicit field initializers
+path: /phloc-holiday/target/generated-sources/xjc/com/phloc/holiday/config/FixedWeekdayBetweenFixed.java
+problem: JAVA0137:JAVA0137 Non-abstract class 'FixedWeekdayBetweenFixed' missing constructor
+problem: JAVA0234:JAVA0234 Class 'FixedWeekdayBetweenFixed' is Serializable but does not define serialVersionUID
+problem: JAVA0098:JAVA0098 Minimize use of implicit field initializers
+path: /phloc-holiday/target/generated-sources/xjc/com/phloc/holiday/config/FixedWeekdayInMonth.java
+problem: JAVA0137:JAVA0137 Non-abstract class 'FixedWeekdayInMonth' missing constructor
+problem: JAVA0234:JAVA0234 Class 'FixedWeekdayInMonth' is Serializable but does not define serialVersionUID
+problem: JAVA0098:JAVA0098 Minimize use of implicit field initializers
+path: /phloc-holiday/target/generated-sources/xjc/com/phloc/holiday/config/FixedWeekdayRelativeToFixed.java
+problem: JAVA0137:JAVA0137 Non-abstract class 'FixedWeekdayRelativeToFixed' missing constructor
+problem: JAVA0234:JAVA0234 Class 'FixedWeekdayRelativeToFixed' is Serializable but does not define serialVersionUID
+problem: JAVA0098:JAVA0098 Minimize use of implicit field initializers
+path: /phloc-holiday/target/generated-sources/xjc/com/phloc/holiday/config/HebrewHoliday.java
+problem: JAVA0137:JAVA0137 Non-abstract class 'HebrewHoliday' missing constructor
+problem: JAVA0234:JAVA0234 Class 'HebrewHoliday' is Serializable but does not define serialVersionUID
+path: /phloc-holiday/target/generated-sources/xjc/com/phloc/holiday/config/HinduHoliday.java
+problem: JAVA0137:JAVA0137 Non-abstract class 'HinduHoliday' missing constructor
+problem: JAVA0234:JAVA0234 Class 'HinduHoliday' is Serializable but does not define serialVersionUID
+path: /phloc-holiday/target/generated-sources/xjc/com/phloc/holiday/config/Holiday.java
+problem: JAVA0011:JAVA0011 Abstract class 'Holiday' does not contain an abstract method
+problem: JAVA0098:JAVA0098 Minimize use of implicit field initializers
+path: /phloc-holiday/target/generated-sources/xjc/com/phloc/holiday/config/Holidays.java
+problem: JAVA0100:JAVA0100 Class contains 12 non-final fields (maximum: 8)
+problem: JAVA0137:JAVA0137 Non-abstract class 'Holidays' missing constructor
+problem: JAVA0234:JAVA0234 Class 'Holidays' is Serializable but does not define serialVersionUID
+problem: JAVA0098:JAVA0098 Minimize use of implicit field initializers
+problem: JAVA0110:JAVA0110 Incorrect javadoc: no @return tag
+problem: JAVA0110:JAVA0110 Incorrect javadoc: no @return tag
+problem: JAVA0110:JAVA0110 Incorrect javadoc: no @return tag
+problem: JAVA0110:JAVA0110 Incorrect javadoc: no @return tag
+problem: JAVA0110:JAVA0110 Incorrect javadoc: no @return tag
+problem: JAVA0110:JAVA0110 Incorrect javadoc: no @return tag
+problem: JAVA0110:JAVA0110 Incorrect javadoc: no @return tag
+problem: JAVA0110:JAVA0110 Incorrect javadoc: no @return tag
+problem: JAVA0110:JAVA0110 Incorrect javadoc: no @return tag
+problem: JAVA0110:JAVA0110 Incorrect javadoc: no @return tag
+problem: JAVA0110:JAVA0110 Incorrect javadoc: no @return tag
+problem: JAVA0110:JAVA0110 Incorrect javadoc: no @return tag
+path: /phloc-holiday/target/generated-sources/xjc/com/phloc/holiday/config/IslamicHoliday.java
+problem: JAVA0137:JAVA0137 Non-abstract class 'IslamicHoliday' missing constructor
+problem: JAVA0234:JAVA0234 Class 'IslamicHoliday' is Serializable but does not define serialVersionUID
+path: /phloc-holiday/target/generated-sources/xjc/com/phloc/holiday/config/MoveableHoliday.java
+problem: JAVA0011:JAVA0011 Abstract class 'MoveableHoliday' does not contain an abstract method
+problem: JAVA0110:JAVA0110 Incorrect javadoc: no @return tag
+path: /phloc-holiday/target/generated-sources/xjc/com/phloc/holiday/config/MovingCondition.java
+problem: JAVA0137:JAVA0137 Non-abstract class 'MovingCondition' missing constructor
+problem: JAVA0234:JAVA0234 Class 'MovingCondition' is Serializable but does not define serialVersionUID
+problem: JAVA0098:JAVA0098 Minimize use of implicit field initializers
+path: /phloc-holiday/target/generated-sources/xjc/com/phloc/holiday/config/ObjectFactory.java
+problem: JAVA0068:JAVA0068 Modifiers not declared in recommended order
+problem: JAVA0022:JAVA0022 Static final field name '_Configuration_QNAME' does not have required form: (<uppercase>|<lowercase>)(<uppercase>|<lowercase>|<underscore>|<digit>)*
+problem: JAVA0057:JAVA0057 Unnecessary default constructor 'ObjectFactory'
+problem: JAVA0110:JAVA0110 Incorrect javadoc: no @return tag
+problem: JAVA0110:JAVA0110 Incorrect javadoc: no @return tag
+problem: JAVA0110:JAVA0110 Incorrect javadoc: no @return tag
+problem: JAVA0110:JAVA0110 Incorrect javadoc: no @return tag
+problem: JAVA0110:JAVA0110 Incorrect javadoc: no @return tag
+problem: JAVA0110:JAVA0110 Incorrect javadoc: no @return tag
+problem: JAVA0110:JAVA0110 Incorrect javadoc: no @return tag
+problem: JAVA0110:JAVA0110 Incorrect javadoc: no @return tag
+problem: JAVA0110:JAVA0110 Incorrect javadoc: no @return tag
+problem: JAVA0110:JAVA0110 Incorrect javadoc: no @return tag
+problem: JAVA0110:JAVA0110 Incorrect javadoc: no @return tag
+problem: JAVA0110:JAVA0110 Incorrect javadoc: no @return tag
+problem: JAVA0110:JAVA0110 Incorrect javadoc: no @return tag
+problem: JAVA0110:JAVA0110 Incorrect javadoc: no @return tag
+problem: JAVA0110:JAVA0110 Incorrect javadoc: no @return tag
+problem: JAVA0110:JAVA0110 Incorrect javadoc: no @return tag
+problem: JAVA0108:JAVA0108 Incorrect javadoc: no @param tag for 'value'
+path: /phloc-holiday/target/generated-sources/xjc/com/phloc/holiday/config/RelativeToEasterSunday.java
+problem: JAVA0137:JAVA0137 Non-abstract class 'RelativeToEasterSunday' missing constructor
+problem: JAVA0234:JAVA0234 Class 'RelativeToEasterSunday' is Serializable but does not define serialVersionUID
+problem: JAVA0098:JAVA0098 Minimize use of implicit field initializers
+problem: JAVA0110:JAVA0110 Incorrect javadoc: no @return tag
+problem: JAVA0108:JAVA0108 Incorrect javadoc: no @param tag for 'value'
+path: /phloc-holiday/target/generated-sources/xjc/com/phloc/holiday/config/RelativeToFixed.java
+problem: JAVA0137:JAVA0137 Non-abstract class 'RelativeToFixed' missing constructor
+problem: JAVA0234:JAVA0234 Class 'RelativeToFixed' is Serializable but does not define serialVersionUID
+problem: JAVA0098:JAVA0098 Minimize use of implicit field initializers
+path: /phloc-holiday/target/generated-sources/xjc/com/phloc/holiday/config/RelativeToWeekdayInMonth.java
+problem: JAVA0137:JAVA0137 Non-abstract class 'RelativeToWeekdayInMonth' missing constructor
+problem: JAVA0234:JAVA0234 Class 'RelativeToWeekdayInMonth' is Serializable but does not define serialVersionUID
+problem: JAVA0098:JAVA0098 Minimize use of implicit field initializers
