@@ -25,6 +25,12 @@
 -->
 <changelog xmlns="http://www.phloc.com/ns/changelog/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.phloc.com/ns/changelog/1.0 schemas/changelog-1.0.xsd" version="1.0" component="phloc-holiday">
+  <release date="2014-01-02" version="2.7.1" />
+  <entry date="2014-01-02" category="tech" action="update" >
+    <change>
+      <text locale="en">Updated to phloc-commons 4.1.0</text>
+    </change>
+  </entry>
   <entry date="2013-12-27" category="tech" action="update">
     <change>
       <text locale="en">Updated to Jollyday trunk with ISO-8859-1 encoded properties files</text>
