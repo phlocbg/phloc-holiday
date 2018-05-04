@@ -8,26 +8,28 @@
 
     =========
 
-    Copyright 2010-2014 phloc systems
+    Copyright (C) 2006-2018 phloc systems
+    http://www.phloc.com
+    office[at]phloc[dot]com
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
     You may obtain a copy of the License at
 
-    http://www.apache.org/licenses/LICENSE-2.0
+            http://www.apache.org/licenses/LICENSE-2.0
 
     Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
-    express or implied. See the License for the specific language
-    governing permissions and limitations under the License.
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
 
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <parent>
     <groupId>com.phloc</groupId>
     <artifactId>parent-pom</artifactId>
-    <version>23.2</version>
+    <version>24.0</version>
     <relativePath>../phloc-parent-pom/pom.xml</relativePath>
   </parent>
   <modelVersion>4.0.0</modelVersion>
@@ -36,7 +38,7 @@
   <packaging>bundle</packaging>
   <name>phloc-holiday</name>
   <description>phloc holiday calculator and manage</description>
-  <url>http://repo.phloc.com/apidocs/phloc-holiday/${project.version}</url>
+  <url>http://github.com/phlocbg/phloc-holiday</url>
   
   <licenses>
     <license>
@@ -47,9 +49,10 @@
   </licenses>
   
   <scm>
-    <url>http://code.google.com/p/phloc-holiday/source/browse/</url>
-    <connection>scm:svn:http://phloc-holiday.googlecode.com/svn/trunk/phloc-holiday</connection>
-    <developerConnection>scm:svn:https://phloc-holiday.googlecode.com/svn/trunk/phloc-holiday</developerConnection>
+    <connection>scm:git:https://github.com/phlocbg/phloc-holiday</connection>
+    <developerConnection>scm:git:https://github.com/phlocbg/phloc-holiday</developerConnection>
+  <url>http://github.com/phlocbg/phloc-holiday</url>
+    <tag>HEAD</tag>
   </scm>
 
   <organization>
